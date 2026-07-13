@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (too large)
+data/*.parquet
+data/*.npz
+data/*.tif
+data/paper_text.txt
+
+# FAISS indices (binary, can be regenerated)
+results/faiss/*.faiss
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PDFs (keep report outputs only)
+2602.10354v1-2.pdf
+report/AlphaEarth_Reproduction_Blueprint.pdf

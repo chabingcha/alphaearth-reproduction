@@ -1,0 +1,296 @@
+{
+  "category_raw_vs_deb": {
+    "climate": {
+      "raw": 0.6361,
+      "debiased": 0.3251
+    },
+    "vegetation": {
+      "raw": 0.2902,
+      "debiased": 0.1186
+    },
+    "hydrology": {
+      "raw": 0.3816,
+      "debiased": 0.2733
+    },
+    "temperature": {
+      "raw": 0.4952,
+      "debiased": 0.1886
+    },
+    "terrain": {
+      "raw": 0.0945,
+      "debiased": 0.0424
+    }
+  },
+  "spatial_cv": {
+    "precip": {
+      "delta_r2": 0.23759999999999998
+    },
+    "solar_rad": {
+      "delta_r2": 0.4337
+    },
+    "vpd": {
+      "delta_r2": 0.1473
+    },
+    "wind_speed": {
+      "delta_r2": 0.4254
+    },
+    "ndvi": {
+      "delta_r2": 0.19610000000000002
+    },
+    "evi": {
+      "delta_r2": 0.199
+    },
+    "lai": {
+      "delta_r2": 0.1064
+    },
+    "fvc": {
+      "delta_r2": 0.1848
+    },
+    "soil_moisture_l1": {
+      "delta_r2": 0.06680000000000003
+    },
+    "soil_moisture_l2": {
+      "delta_r2": 0.07210000000000003
+    },
+    "evapotranspiration": {
+      "delta_r2": 0.14079999999999998
+    },
+    "runoff": {
+      "delta_r2": 0.15320000000000006
+    },
+    "lst_day": {
+      "delta_r2": 0.1429
+    },
+    "lst_night": {
+      "delta_r2": 0.33219999999999994
+    },
+    "t_air_max": {
+      "delta_r2": 0.2001
+    },
+    "t_air_min": {
+      "delta_r2": 0.4104
+    },
+    "t_air_mean": {
+      "delta_r2": 0.44780000000000003
+    },
+    "elevation": {
+      "delta_r2": 0.13829999999999998
+    },
+    "slope": {
+      "delta_r2": 0.06489999999999999
+    },
+    "aspect": {
+      "delta_r2": 0.0037999999999999996
+    },
+    "tpi": {
+      "delta_r2": 0.0014000000000000002
+    }
+  },
+  "temporal_cv": {
+    "precip": {
+      "delta_r2": 0.654
+    },
+    "solar_rad": {
+      "delta_r2": 0.654
+    },
+    "vpd": {
+      "delta_r2": 0.654
+    },
+    "wind_speed": {
+      "delta_r2": 0.654
+    },
+    "ndvi": {
+      "delta_r2": 0.654
+    },
+    "evi": {
+      "delta_r2": 0.654
+    },
+    "lai": {
+      "delta_r2": 0.654
+    },
+    "fvc": {
+      "delta_r2": 0.654
+    },
+    "soil_moisture_l1": {
+      "delta_r2": 0.654
+    },
+    "soil_moisture_l2": {
+      "delta_r2": 0.654
+    },
+    "evapotranspiration": {
+      "delta_r2": 0.654
+    },
+    "runoff": {
+      "delta_r2": 0.654
+    },
+    "lst_day": {
+      "delta_r2": 0.654
+    },
+    "lst_night": {
+      "delta_r2": 0.654
+    },
+    "t_air_max": {
+      "delta_r2": 0.654
+    },
+    "t_air_min": {
+      "delta_r2": 0.654
+    },
+    "t_air_mean": {
+      "delta_r2": 0.654
+    },
+    "elevation": {
+      "delta_r2": 0.654
+    },
+    "slope": {
+      "delta_r2": 0.654
+    },
+    "aspect": {
+      "delta_r2": 0.654
+    },
+    "tpi": {
+      "delta_r2": 0.654
+    }
+  },
+  "comparison": {
+    "ridge_r2": {
+      "precip": 0.3824,
+      "solar_rad": 0.2186,
+      "vpd": 0.4312,
+      "wind_speed": 0.268,
+      "ndvi": 0.1253,
+      "evi": 0.1387,
+      "lai": 0.0786,
+      "fvc": 0.1319,
+      "soil_moisture_l1": 0.2284,
+      "soil_moisture_l2": 0.215,
+      "evapotranspiration": 0.1905,
+      "runoff": 0.4594,
+      "lst_day": 0.1429,
+      "lst_night": 0.1247,
+      "t_air_max": 0.2634,
+      "t_air_min": 0.24,
+      "t_air_mean": 0.1718,
+      "elevation": 0.0853,
+      "slope": 0.0703,
+      "aspect": 0.0058,
+      "tpi": 0.0083
+    },
+    "ridge_r2_debiased": {
+      "precip": 0.62,
+      "solar_rad": 0.6523,
+      "vpd": 0.5785,
+      "wind_speed": 0.6934,
+      "ndvi": 0.3214,
+      "evi": 0.3377,
+      "lai": 0.185,
+      "fvc": 0.3167,
+      "soil_moisture_l1": 0.2952,
+      "soil_moisture_l2": 0.2871,
+      "evapotranspiration": 0.3313,
+      "runoff": 0.6126,
+      "lst_day": 0.2858,
+      "lst_night": 0.4569,
+      "t_air_max": 0.4635,
+      "t_air_min": 0.6504,
+      "t_air_mean": 0.6196,
+      "elevation": 0.2236,
+      "slope": 0.1352,
+      "aspect": 0.0096,
+      "tpi": 0.0097
+    },
+    "rf_test_r2": {
+      "precip": -0.9085,
+      "solar_rad": -0.7775,
+      "vpd": -1.35,
+      "wind_speed": 0.3311,
+      "ndvi": 0.3656,
+      "evi": 0.4035,
+      "lai": 0.2801,
+      "fvc": 0.3491,
+      "soil_moisture_l1": 0.0562,
+      "soil_moisture_l2": -0.0779,
+      "evapotranspiration": 0.2439,
+      "runoff": -0.9787,
+      "lst_day": 0.3668,
+      "lst_night": 0.4736,
+      "t_air_max": 0.129,
+      "t_air_min": 0.3835,
+      "t_air_mean": 0.3157,
+      "elevation": 0.3242,
+      "slope": 0.2378,
+      "aspect": 0.0334,
+      "tpi": 0.0654
+    },
+    "xgb_test_r2": {
+      "precip": -0.8966,
+      "solar_rad": -0.7697,
+      "vpd": -1.4659,
+      "wind_speed": 0.3508,
+      "ndvi": 0.3557,
+      "evi": 0.3652,
+      "lai": 0.2543,
+      "fvc": 0.3319,
+      "soil_moisture_l1": -0.0073,
+      "soil_moisture_l2": -0.1036,
+      "evapotranspiration": 0.2049,
+      "runoff": -0.9572,
+      "lst_day": 0.2986,
+      "lst_night": 0.4787,
+      "t_air_max": 0.112,
+      "t_air_min": 0.307,
+      "t_air_mean": 0.3116,
+      "elevation": 0.3102,
+      "slope": 0.2046,
+      "aspect": 0.0224,
+      "tpi": 0.0542
+    },
+    "category_raw": {
+      "Climate": 0.6361,
+      "Vegetation": 0.2902,
+      "Hydrology": 0.3816,
+      "Temperature": 0.4952,
+      "Terrain": 0.0945
+    },
+    "category_debiased": {
+      "Climate": 0.3251,
+      "Vegetation": 0.1186,
+      "Hydrology": 0.2733,
+      "Temperature": 0.1886,
+      "Terrain": 0.0424
+    },
+    "category_rf": {
+      "Climate": -0.6762,
+      "Vegetation": 0.3496,
+      "Hydrology": -0.1891,
+      "Temperature": 0.3337,
+      "Terrain": 0.1652
+    },
+    "category_xgb": {
+      "Climate": -0.6954,
+      "Vegetation": 0.3268,
+      "Hydrology": -0.2158,
+      "Temperature": 0.3016,
+      "Terrain": 0.1478
+    },
+    "spatial_encoding": {
+      "lat_r2": 0.7773,
+      "lon_r2": 0.754,
+      "mean_spatial_r2_per_dim": 0.3396,
+      "dims_spatial_r2_gt_0_5": "13/64",
+      "variance_removed_by_debiasing": 0.721,
+      "post_debias_lat_r2": 0.0
+    },
+    "comparison_with_paper": {
+      "mean_ridge_r2_paper": 0.97,
+      "mean_ridge_r2_ours_raw": 0.385,
+      "mean_ridge_r2_ours_debiased": 0.19,
+      "best_r2_ours_raw": 0.6934,
+      "best_r2_ours_debiased": 0.459,
+      "vars_r2_gt_0_9_paper": "12/26",
+      "vars_r2_gt_0_9_ours": "0/21",
+      "mean_spatial_cv_delta_paper": 0.017,
+      "mean_spatial_cv_delta_ours": 1.6063,
+      "spatial_cv_factor": 95
+    }
+  }
+}
