@@ -1,0 +1,164 @@
+{
+  "summary": {
+    "mean_delta_r2": 0.0178,
+    "mean_abs_delta_r2": 0.0215
+  },
+  "per_variable": {
+    "elevation": {
+      "r2_random_mean": 0.3034,
+      "r2_spatial_mean": 0.2434,
+      "delta_r2": 0.06,
+      "delta_r2_abs": 0.06
+    },
+    "slope": {
+      "r2_random_mean": -0.0777,
+      "r2_spatial_mean": -0.088,
+      "delta_r2": 0.0102,
+      "delta_r2_abs": 0.0102
+    },
+    "aspect": {
+      "r2_random_mean": 0.3158,
+      "r2_spatial_mean": 0.293,
+      "delta_r2": 0.0228,
+      "delta_r2_abs": 0.0228
+    },
+    "flow_accumulation": {
+      "r2_random_mean": 0.8556,
+      "r2_spatial_mean": 0.8511,
+      "delta_r2": 0.0045,
+      "delta_r2_abs": 0.0045
+    },
+    "clay_fraction": {
+      "r2_random_mean": 0.3988,
+      "r2_spatial_mean": 0.403,
+      "delta_r2": -0.0042,
+      "delta_r2_abs": 0.0042
+    },
+    "organic_carbon": {
+      "r2_random_mean": 0.144,
+      "r2_spatial_mean": 0.1599,
+      "delta_r2": -0.0158,
+      "delta_r2_abs": 0.0158
+    },
+    "soil_ph": {
+      "r2_random_mean": 0.5168,
+      "r2_spatial_mean": 0.5026,
+      "delta_r2": 0.0141,
+      "delta_r2_abs": 0.0141
+    },
+    "water_capacity": {
+      "r2_random_mean": 0.34,
+      "r2_spatial_mean": 0.3341,
+      "delta_r2": 0.0059,
+      "delta_r2_abs": 0.0059
+    },
+    "ndvi_mean": {
+      "r2_random_mean": 0.7365,
+      "r2_spatial_mean": 0.7227,
+      "delta_r2": 0.0138,
+      "delta_r2_abs": 0.0138
+    },
+    "ndvi_max": {
+      "r2_random_mean": 0.6701,
+      "r2_spatial_mean": 0.6685,
+      "delta_r2": 0.0016,
+      "delta_r2_abs": 0.0016
+    },
+    "evi_mean": {
+      "r2_random_mean": 0.6574,
+      "r2_spatial_mean": 0.6542,
+      "delta_r2": 0.0031,
+      "delta_r2_abs": 0.0031
+    },
+    "lai_mean": {
+      "r2_random_mean": 0.1617,
+      "r2_spatial_mean": 0.1548,
+      "delta_r2": 0.0068,
+      "delta_r2_abs": 0.0068
+    },
+    "tree_cover": {
+      "r2_random_mean": 0.2446,
+      "r2_spatial_mean": 0.2265,
+      "delta_r2": 0.0181,
+      "delta_r2_abs": 0.0181
+    },
+    "albedo": {
+      "r2_random_mean": 0.0418,
+      "r2_spatial_mean": 0.0526,
+      "delta_r2": -0.0108,
+      "delta_r2_abs": 0.0108
+    },
+    "lst_daytime": {
+      "r2_random_mean": 0.7892,
+      "r2_spatial_mean": 0.7865,
+      "delta_r2": 0.0027,
+      "delta_r2_abs": 0.0027
+    },
+    "lst_nighttime": {
+      "r2_random_mean": 0.7829,
+      "r2_spatial_mean": 0.7903,
+      "delta_r2": -0.0073,
+      "delta_r2_abs": 0.0073
+    },
+    "air_temp_mean": {
+      "r2_random_mean": 0.7957,
+      "r2_spatial_mean": 0.7998,
+      "delta_r2": -0.0041,
+      "delta_r2_abs": 0.0041
+    },
+    "dew_point_temp": {
+      "r2_random_mean": 0.8572,
+      "r2_spatial_mean": 0.8622,
+      "delta_r2": -0.005,
+      "delta_r2_abs": 0.005
+    },
+    "annual_precip": {
+      "r2_random_mean": 0.2639,
+      "r2_spatial_mean": 0.174,
+      "delta_r2": 0.0899,
+      "delta_r2_abs": 0.0899
+    },
+    "max_monthly_precip": {
+      "r2_random_mean": 0.2191,
+      "r2_spatial_mean": 0.1604,
+      "delta_r2": 0.0588,
+      "delta_r2_abs": 0.0588
+    },
+    "soil_moisture": {
+      "r2_random_mean": 0.394,
+      "r2_spatial_mean": 0.385,
+      "delta_r2": 0.009,
+      "delta_r2_abs": 0.009
+    },
+    "annual_runoff": {
+      "r2_random_mean": 0.2498,
+      "r2_spatial_mean": 0.1426,
+      "delta_r2": 0.1072,
+      "delta_r2_abs": 0.1072
+    },
+    "annual_et": {
+      "r2_random_mean": 0.7295,
+      "r2_spatial_mean": 0.7296,
+      "delta_r2": -0.0001,
+      "delta_r2_abs": 0.0001
+    },
+    "impervious_surface": {
+      "r2_random_mean": 0.6784,
+      "r2_spatial_mean": 0.6223,
+      "delta_r2": 0.0561,
+      "delta_r2_abs": 0.0561
+    },
+    "nighttime_lights": {
+      "r2_random_mean": 0.6919,
+      "r2_spatial_mean": 0.6907,
+      "delta_r2": 0.0012,
+      "delta_r2_abs": 0.0012
+    },
+    "population_density": {
+      "r2_random_mean": 0.7581,
+      "r2_spatial_mean": 0.7327,
+      "delta_r2": 0.0254,
+      "delta_r2_abs": 0.0254
+    }
+  }
+}

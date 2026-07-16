@@ -1,0 +1,687 @@
+{
+  "summary": {
+    "n_variables": 26,
+    "n_samples": 2000,
+    "n_estimators": 30,
+    "mean_r2": 0.4622,
+    "best_r2": 0.8568,
+    "best_r2_var": "dew_point_temp",
+    "n_vars_r2_above_050": 12,
+    "n_vars_r2_above_075": 6
+  },
+  "r2_per_variable": {
+    "elevation": {
+      "oob_r2": 0.2848253607824909
+    },
+    "slope": {
+      "oob_r2": -0.12384474687429181
+    },
+    "aspect": {
+      "oob_r2": 0.28623757213232603
+    },
+    "flow_accumulation": {
+      "oob_r2": 0.8558182264658594
+    },
+    "clay_fraction": {
+      "oob_r2": 0.3777094459327609
+    },
+    "organic_carbon": {
+      "oob_r2": 0.11250806273123992
+    },
+    "soil_ph": {
+      "oob_r2": 0.4946468931713286
+    },
+    "water_capacity": {
+      "oob_r2": 0.3162781743859219
+    },
+    "ndvi_mean": {
+      "oob_r2": 0.7328018896893405
+    },
+    "ndvi_max": {
+      "oob_r2": 0.6636414980401889
+    },
+    "evi_mean": {
+      "oob_r2": 0.6531205748357224
+    },
+    "lai_mean": {
+      "oob_r2": 0.10754999759929096
+    },
+    "tree_cover": {
+      "oob_r2": 0.19872368943279406
+    },
+    "albedo": {
+      "oob_r2": 0.028801502089385145
+    },
+    "lst_daytime": {
+      "oob_r2": 0.7716341019683541
+    },
+    "lst_nighttime": {
+      "oob_r2": 0.7798144301212012
+    },
+    "air_temp_mean": {
+      "oob_r2": 0.7926047047804434
+    },
+    "dew_point_temp": {
+      "oob_r2": 0.8568201773056889
+    },
+    "annual_precip": {
+      "oob_r2": 0.23774721798569265
+    },
+    "max_monthly_precip": {
+      "oob_r2": 0.19074355435957213
+    },
+    "soil_moisture": {
+      "oob_r2": 0.3585517679213881
+    },
+    "annual_runoff": {
+      "oob_r2": 0.179321191603645
+    },
+    "annual_et": {
+      "oob_r2": 0.7235543758426213
+    },
+    "impervious_surface": {
+      "oob_r2": 0.666414189923104
+    },
+    "nighttime_lights": {
+      "oob_r2": 0.7108946256664745
+    },
+    "population_density": {
+      "oob_r2": 0.7590766787190778
+    }
+  },
+  "top3_dims_per_variable": {
+    "elevation": [
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.8047241442990218
+      },
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.13471982923278483
+      },
+      {
+        "dim_index": 42,
+        "dim_label": "A42",
+        "importance": 0.08300710974698533
+      }
+    ],
+    "slope": [
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.07373893766961966
+      },
+      {
+        "dim_index": 61,
+        "dim_label": "A61",
+        "importance": 0.06643048709894699
+      },
+      {
+        "dim_index": 7,
+        "dim_label": "A07",
+        "importance": 0.044725455687727865
+      }
+    ],
+    "aspect": [
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.6019760797331671
+      },
+      {
+        "dim_index": 42,
+        "dim_label": "A42",
+        "importance": 0.27028037612982614
+      },
+      {
+        "dim_index": 13,
+        "dim_label": "A13",
+        "importance": 0.10913383372179526
+      }
+    ],
+    "flow_accumulation": [
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 1.8450018510689867
+      },
+      {
+        "dim_index": 22,
+        "dim_label": "A22",
+        "importance": 0.02293690494244886
+      },
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.0031171457692393822
+      }
+    ],
+    "clay_fraction": [
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.4838991482860007
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.3282855364749627
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.08039867237650349
+      }
+    ],
+    "organic_carbon": [
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.47511528311817736
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.2910780637449967
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.12135207415516429
+      }
+    ],
+    "soil_ph": [
+      {
+        "dim_index": 10,
+        "dim_label": "A10",
+        "importance": 1.05995171110476
+      },
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.102418977843118
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.06715623789360352
+      }
+    ],
+    "water_capacity": [
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.5486060078789695
+      },
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.2545454131693337
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.07240586937257043
+      }
+    ],
+    "ndvi_mean": [
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 1.0209366090912615
+      },
+      {
+        "dim_index": 9,
+        "dim_label": "A09",
+        "importance": 0.14122543072750957
+      },
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.07298300514973462
+      }
+    ],
+    "ndvi_max": [
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.9834774006930541
+      },
+      {
+        "dim_index": 9,
+        "dim_label": "A09",
+        "importance": 0.143156453397016
+      },
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.1015693631085924
+      }
+    ],
+    "evi_mean": [
+      {
+        "dim_index": 9,
+        "dim_label": "A09",
+        "importance": 0.48835101783717105
+      },
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.37340103985623657
+      },
+      {
+        "dim_index": 40,
+        "dim_label": "A40",
+        "importance": 0.1564581918758592
+      }
+    ],
+    "lai_mean": [
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.6831370598655843
+      },
+      {
+        "dim_index": 9,
+        "dim_label": "A09",
+        "importance": 0.09966794359139586
+      },
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.06622164902757106
+      }
+    ],
+    "tree_cover": [
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.6584603659040251
+      },
+      {
+        "dim_index": 9,
+        "dim_label": "A09",
+        "importance": 0.2603358584168078
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.06069567715915151
+      }
+    ],
+    "albedo": [
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.5017440617314247
+      },
+      {
+        "dim_index": 9,
+        "dim_label": "A09",
+        "importance": 0.15103100297412006
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.0668883858317109
+      }
+    ],
+    "lst_daytime": [
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.49101363832632083
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.4454252954432672
+      },
+      {
+        "dim_index": 58,
+        "dim_label": "A58",
+        "importance": 0.03845698041136266
+      }
+    ],
+    "lst_nighttime": [
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.5438575694962884
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.422405011473139
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.04334716973524311
+      }
+    ],
+    "air_temp_mean": [
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.5169229061433713
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.4102146493637031
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.03313227538091016
+      }
+    ],
+    "dew_point_temp": [
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.5158824250104054
+      },
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.4969608465745101
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.009341525964955522
+      }
+    ],
+    "annual_precip": [
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.46450563307308207
+      },
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.43442587995370685
+      },
+      {
+        "dim_index": 10,
+        "dim_label": "A10",
+        "importance": 0.13457881724792883
+      }
+    ],
+    "max_monthly_precip": [
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.3962233315883286
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.39587866390705945
+      },
+      {
+        "dim_index": 10,
+        "dim_label": "A10",
+        "importance": 0.12359984649222844
+      }
+    ],
+    "soil_moisture": [
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.4971127185932623
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.34290949351900335
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.20840086819853912
+      }
+    ],
+    "annual_runoff": [
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.4366616114652441
+      },
+      {
+        "dim_index": 62,
+        "dim_label": "A62",
+        "importance": 0.33697927851419424
+      },
+      {
+        "dim_index": 42,
+        "dim_label": "A42",
+        "importance": 0.1150084233421433
+      }
+    ],
+    "annual_et": [
+      {
+        "dim_index": 4,
+        "dim_label": "A04",
+        "importance": 0.5280415728453115
+      },
+      {
+        "dim_index": 54,
+        "dim_label": "A54",
+        "importance": 0.47398888515947374
+      },
+      {
+        "dim_index": 26,
+        "dim_label": "A26",
+        "importance": 0.03471717157040662
+      }
+    ],
+    "impervious_surface": [
+      {
+        "dim_index": 13,
+        "dim_label": "A13",
+        "importance": 0.9225337923607041
+      },
+      {
+        "dim_index": 42,
+        "dim_label": "A42",
+        "importance": 0.15818525557518073
+      },
+      {
+        "dim_index": 63,
+        "dim_label": "A63",
+        "importance": 0.09190366901974589
+      }
+    ],
+    "nighttime_lights": [
+      {
+        "dim_index": 13,
+        "dim_label": "A13",
+        "importance": 0.5347815789299104
+      },
+      {
+        "dim_index": 42,
+        "dim_label": "A42",
+        "importance": 0.39144301063226444
+      },
+      {
+        "dim_index": 63,
+        "dim_label": "A63",
+        "importance": 0.20479376884190992
+      }
+    ],
+    "population_density": [
+      {
+        "dim_index": 13,
+        "dim_label": "A13",
+        "importance": 0.8583768535605278
+      },
+      {
+        "dim_index": 42,
+        "dim_label": "A42",
+        "importance": 0.1934611228313343
+      },
+      {
+        "dim_index": 63,
+        "dim_label": "A63",
+        "importance": 0.12673557404699043
+      }
+    ]
+  },
+  "ground_truth_evaluation": {
+    "n_ground_truth_mappings": 12,
+    "n_in_top3": 12,
+    "n_top1": 6,
+    "top3_recovery_rate": 1.0,
+    "top1_recovery_rate": 0.5,
+    "per_mapping": [
+      {
+        "dim": "A04",
+        "true_var": "dew_point_temp",
+        "in_top3": true,
+        "rank_in_top3": 2
+      },
+      {
+        "dim": "A09",
+        "true_var": "evi_mean",
+        "in_top3": true,
+        "rank_in_top3": 1
+      },
+      {
+        "dim": "A10",
+        "true_var": "soil_ph",
+        "in_top3": true,
+        "rank_in_top3": 1
+      },
+      {
+        "dim": "A13",
+        "true_var": "population_density",
+        "in_top3": true,
+        "rank_in_top3": 1
+      },
+      {
+        "dim": "A22",
+        "true_var": "flow_accumulation",
+        "in_top3": true,
+        "rank_in_top3": 2
+      },
+      {
+        "dim": "A26",
+        "true_var": "flow_accumulation",
+        "in_top3": true,
+        "rank_in_top3": 1
+      },
+      {
+        "dim": "A40",
+        "true_var": "evi_mean",
+        "in_top3": true,
+        "rank_in_top3": 3
+      },
+      {
+        "dim": "A42",
+        "true_var": "nighttime_lights",
+        "in_top3": true,
+        "rank_in_top3": 2
+      },
+      {
+        "dim": "A54",
+        "true_var": "dew_point_temp",
+        "in_top3": true,
+        "rank_in_top3": 1
+      },
+      {
+        "dim": "A58",
+        "true_var": "lst_daytime",
+        "in_top3": true,
+        "rank_in_top3": 3
+      },
+      {
+        "dim": "A62",
+        "true_var": "ndvi_mean",
+        "in_top3": true,
+        "rank_in_top3": 1
+      },
+      {
+        "dim": "A63",
+        "true_var": "nighttime_lights",
+        "in_top3": true,
+        "rank_in_top3": 3
+      }
+    ]
+  },
+  "method_convergence": {
+    "overall_pearson_r": 0.6882,
+    "mean_per_dim_r": 0.1933,
+    "per_dim_pearson_r": [
+      0.1829,
+      -0.0997,
+      0.1972,
+      0.4258,
+      0.8324,
+      -0.192,
+      -0.0836,
+      0.1672,
+      -0.0506,
+      0.6356,
+      0.6393,
+      0.184,
+      0.2357,
+      0.8354,
+      0.3622,
+      0.1442,
+      -0.226,
+      0.0551,
+      -0.0097,
+      0.4028,
+      -0.0052,
+      0.174,
+      0.5126,
+      0.0545,
+      0.223,
+      -0.2505,
+      0.9538,
+      -0.4633,
+      0.1406,
+      0.5732,
+      0.0708,
+      -0.0364,
+      0.089,
+      0.2548,
+      0.4016,
+      -0.0833,
+      -0.1956,
+      -0.0765,
+      0.3005,
+      0.0866,
+      0.5162,
+      -0.1226,
+      0.911,
+      -0.328,
+      0.0507,
+      0.4459,
+      0.4213,
+      0.2317,
+      0.0087,
+      0.3895,
+      -0.2836,
+      0.0811,
+      0.0874,
+      0.3348,
+      0.8234,
+      0.2634,
+      -0.348,
+      -0.2296,
+      0.4014,
+      0.0766,
+      -0.02,
+      -0.2204,
+      0.5987,
+      0.9211
+    ]
+  }
+}

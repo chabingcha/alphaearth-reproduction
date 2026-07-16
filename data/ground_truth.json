@@ -1,0 +1,95 @@
+{
+  "mappings": {
+    "4": {
+      "env_var_idx": 17,
+      "env_var_name": "dew_point_temp",
+      "true_correlation": 0.8707340995531029
+    },
+    "9": {
+      "env_var_idx": 10,
+      "env_var_name": "evi_mean",
+      "true_correlation": 0.7040509016242213
+    },
+    "10": {
+      "env_var_idx": 6,
+      "env_var_name": "soil_ph",
+      "true_correlation": 0.7076454638951022
+    },
+    "13": {
+      "env_var_idx": 25,
+      "env_var_name": "population_density",
+      "true_correlation": 0.7268285205808716
+    },
+    "22": {
+      "env_var_idx": 3,
+      "env_var_name": "flow_accumulation",
+      "true_correlation": 0.5637993128040777
+    },
+    "26": {
+      "env_var_idx": 3,
+      "env_var_name": "flow_accumulation",
+      "true_correlation": 0.9274210543258221
+    },
+    "40": {
+      "env_var_idx": 10,
+      "env_var_name": "evi_mean",
+      "true_correlation": 0.51932754071601
+    },
+    "42": {
+      "env_var_idx": 24,
+      "env_var_name": "nighttime_lights",
+      "true_correlation": 0.626895245260085
+    },
+    "54": {
+      "env_var_idx": 17,
+      "env_var_name": "dew_point_temp",
+      "true_correlation": 0.8795402560494218
+    },
+    "58": {
+      "env_var_idx": 14,
+      "env_var_name": "lst_daytime",
+      "true_correlation": 0.503353732008139
+    },
+    "62": {
+      "env_var_idx": 8,
+      "env_var_name": "ndvi_mean",
+      "true_correlation": 0.8216029922668237
+    },
+    "63": {
+      "env_var_idx": 24,
+      "env_var_name": "nighttime_lights",
+      "true_correlation": 0.5965442570082016
+    }
+  },
+  "env_var_names": [
+    "elevation",
+    "slope",
+    "aspect",
+    "flow_accumulation",
+    "clay_fraction",
+    "organic_carbon",
+    "soil_ph",
+    "water_capacity",
+    "ndvi_mean",
+    "ndvi_max",
+    "evi_mean",
+    "lai_mean",
+    "tree_cover",
+    "albedo",
+    "lst_daytime",
+    "lst_nighttime",
+    "air_temp_mean",
+    "dew_point_temp",
+    "annual_precip",
+    "max_monthly_precip",
+    "soil_moisture",
+    "annual_runoff",
+    "annual_et",
+    "impervious_surface",
+    "nighttime_lights",
+    "population_density"
+  ],
+  "n_samples": 2000,
+  "n_embedding_dims": 64,
+  "n_env_vars": 26
+}
