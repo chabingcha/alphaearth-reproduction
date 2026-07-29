@@ -32,6 +32,7 @@ def generate_dataset(
     n_env_vars: int = 26,
     noise_level: float = 0.3,
     spatial_range: tuple = ((-125.0, -66.5), (24.5, 49.5)),  # CONUS-like
+    random_seed: int = 42,
 ):
     """
     Generate synthetic dataset mimicking AlphaEarth embedding structure.
@@ -50,6 +51,8 @@ def generate_dataset(
         Fraction of variance that is noise (0-1)
     spatial_range : tuple
         ((lon_min, lon_max), (lat_min, lat_max)) — CONUS range
+    random_seed : int
+        Seed used for deterministic repeated experiments.
 
     Returns
     -------
@@ -59,6 +62,13 @@ def generate_dataset(
     ground_truth : dict — mapping of active_dim_idx → env_var_idx → true_correlation
     env_var_names : list
     """
+    # === IMPROVEMENT MODIFICATION START ===
+    # The baseline fixed the seed once at import time, which made repeated-seed
+    # statistical experiments order-dependent. Re-seeding at function entry
+    # preserves the original seed-42 dataset while making each call reproducible.
+    np.random.seed(random_seed)
+    # === IMPROVEMENT MODIFICATION END ===
+
     (lon_min, lon_max), (lat_min, lat_max) = spatial_range
 
     # ── Spatial coordinates (uniform grid with jitter) ──

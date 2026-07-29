@@ -1,5 +1,34 @@
 # AlphaEarth Embedding Interpretability — Reproduction
 
+## Assignment 2 Improvement (ExtraTrees)
+
+This updated repository adds a statistically evaluated improvement to the
+paper's per-variable Random Forest reconstruction module. The proposed model
+uses 100 Extremely Randomized Trees with `max_features=0.7`.
+
+Full paired experiment (20 independent dataset seeds, 26 targets):
+
+| Evaluation | RF baseline | Improved ExtraTrees | Paired gain |
+|---|---:|---:|---:|
+| Random held-out macro R² | 0.4909 | 0.5158 | +0.0249 |
+| Spatial-block held-out macro R² | 0.4406 | 0.4685 | +0.0279 |
+| Mapping recall@3 | 0.9625 | 0.9625 | 0.0000 |
+| Median fit/evaluation time | 3.19 s | 2.71 s | 15% faster |
+
+For the primary endpoint, the 95% bootstrap confidence interval for the
+paired gain is `[0.0223, 0.0275]`; paired t-test `p = 2.06e-13`. ExtraTrees
+wins on all 20 seeds and all 26 per-variable comparisons remain significant
+after Benjamini-Hochberg correction.
+
+See [IMPROVEMENT_NOTES.md](IMPROVEMENT_NOTES.md), the runnable experiment in
+`experiments/run_improvement_experiment.py`, and the complete artifacts under
+`results/improvement/`.
+
+```bash
+python -m pytest tests/test_improvement.py
+python experiments/run_improvement_experiment.py
+```
+
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
