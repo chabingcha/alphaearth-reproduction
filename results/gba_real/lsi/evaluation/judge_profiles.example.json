@@ -1,0 +1,26 @@
+[
+  {
+    "name": "judge_a",
+    "base_url": "https://provider-a.example/v1",
+    "model": "model-a",
+    "api_key_env": "GBA_JUDGE_A_KEY"
+  },
+  {
+    "name": "judge_b",
+    "base_url": "https://provider-b.example/v1",
+    "model": "model-b",
+    "api_key_env": "GBA_JUDGE_B_KEY"
+  },
+  {
+    "name": "judge_c",
+    "base_url": "https://provider-c.example/v1",
+    "model": "model-c",
+    "api_key_env": "GBA_JUDGE_C_KEY"
+  },
+  {
+    "name": "judge_d",
+    "base_url": "https://provider-d.example/v1",
+    "model": "model-d",
+    "api_key_env": "GBA_JUDGE_D_KEY"
+  }
+]
