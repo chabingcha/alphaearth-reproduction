@@ -1,0 +1,3584 @@
+{
+  "method": {
+    "description": "three-method dimension dictionary",
+    "primary_rule": "Use a >=2 method vote when available; otherwise use the highest mean normalized support across absolute Spearman, RF permutation importance and Transformer permutation importance.",
+    "robust_rule": "at least two methods agree and temporal stability r >= 0.90"
+  },
+  "summary": {
+    "dimensions": 64,
+    "variables": 26,
+    "dimensions_two_or_more_methods_agree": 27,
+    "dimensions_all_three_methods_agree": 2,
+    "robust_dimensions": 17,
+    "method_matrix_correlations": {
+      "spearman_vs_rf": 0.27314532045170203,
+      "spearman_vs_transformer": 0.0957365324180593,
+      "rf_vs_transformer": 0.20128554925693204
+    }
+  },
+  "dimensions": {
+    "A00": {
+      "primary_variable": "population_density",
+      "primary_variable_zh": "\u4eba\u53e3\u5bc6\u5ea6",
+      "category": "urban",
+      "unit": "people/km2",
+      "direction": "negative",
+      "spearman_rho": -0.06875615314694178,
+      "rf_importance": 0.059691353997955096,
+      "transformer_importance": 0.03776021399376236,
+      "combined_support": 0.033567046474820735,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "population_density",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.8960973164114211,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "population_density",
+          "score": 0.033567046474820735,
+          "spearman_rho": -0.06875615314694178
+        },
+        {
+          "variable": "slope",
+          "score": 0.015107317522428915,
+          "spearman_rho": 0.46428784434844217
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.01383334971958696,
+          "spearman_rho": -0.1930935548508403
+        }
+      ]
+    },
+    "A01": {
+      "primary_variable": "population_density",
+      "primary_variable_zh": "\u4eba\u53e3\u5bc6\u5ea6",
+      "category": "urban",
+      "unit": "people/km2",
+      "direction": "negative",
+      "spearman_rho": -0.6693344395961734,
+      "rf_importance": 0.4201794424048361,
+      "transformer_importance": 0.01880673531111953,
+      "combined_support": 0.15687347947433394,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "population_density",
+        "transformer": "flow_accumulation"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9677233320384118,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "population_density",
+          "score": 0.15687347947433394,
+          "spearman_rho": -0.6693344395961734
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.02545354586278271,
+          "spearman_rho": 0.28991148106938536
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.023441364805979147,
+          "spearman_rho": -0.17605461043698745
+        }
+      ]
+    },
+    "A02": {
+      "primary_variable": "organic_carbon",
+      "primary_variable_zh": "\u571f\u58e4\u6709\u673a\u78b3",
+      "category": "soil",
+      "unit": "g/kg",
+      "direction": "negative",
+      "spearman_rho": -0.5542606398672945,
+      "rf_importance": 0.11113533064896128,
+      "transformer_importance": 0.040136651266260155,
+      "combined_support": 0.05995672351698556,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "organic_carbon",
+        "transformer": "organic_carbon"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9577574872825695,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "organic_carbon",
+          "score": 0.05995672351698556,
+          "spearman_rho": -0.5542606398672945
+        },
+        {
+          "variable": "albedo",
+          "score": 0.03791485433447515,
+          "spearman_rho": -0.05904612778364937
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.03194318028650055,
+          "spearman_rho": 0.19941772833988844
+        }
+      ]
+    },
+    "A03": {
+      "primary_variable": "max_monthly_precip",
+      "primary_variable_zh": "\u6700\u5927\u6708\u964d\u6c34\u91cf",
+      "category": "climate",
+      "unit": "mm",
+      "direction": "positive",
+      "spearman_rho": 0.27257271581690146,
+      "rf_importance": 0.14077585699946255,
+      "transformer_importance": 0.10150706659406737,
+      "combined_support": 0.09354571326391714,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "annual_precip",
+        "transformer": "max_monthly_precip"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9058942111643662,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.09354571326391714,
+          "spearman_rho": 0.27257271581690146
+        },
+        {
+          "variable": "annual_precip",
+          "score": 0.08170798449696946,
+          "spearman_rho": 0.3332731535094919
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.047630370251520976,
+          "spearman_rho": 0.28488868212451024
+        }
+      ]
+    },
+    "A04": {
+      "primary_variable": "air_temp_mean",
+      "primary_variable_zh": "\u5e74\u5747\u6c14\u6e29",
+      "category": "temperature",
+      "unit": "degC",
+      "direction": "negative",
+      "spearman_rho": -0.6444604543039891,
+      "rf_importance": 0.33218654142670484,
+      "transformer_importance": 0.0,
+      "combined_support": 0.12381537871949266,
+      "method_choices": {
+        "spearman": "air_temp_mean",
+        "random_forest": "air_temp_mean",
+        "transformer": "soil_ph"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "random_forest"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9094243727715154,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "air_temp_mean",
+          "score": 0.12381537871949266,
+          "spearman_rho": -0.6444604543039891
+        },
+        {
+          "variable": "albedo",
+          "score": 0.11626765066368942,
+          "spearman_rho": 0.6044284225300111
+        },
+        {
+          "variable": "lst_nighttime",
+          "score": 0.0928857959305323,
+          "spearman_rho": -0.47811343284619245
+        }
+      ]
+    },
+    "A05": {
+      "primary_variable": "elevation",
+      "primary_variable_zh": "\u9ad8\u7a0b",
+      "category": "terrain",
+      "unit": "m",
+      "direction": "negative",
+      "spearman_rho": -0.39948167245810945,
+      "rf_importance": 0.052946205124396774,
+      "transformer_importance": 0.012901891959026811,
+      "combined_support": 0.02646747862267554,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "impervious_surface",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [
+        "spearman"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.824960048471886,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "elevation",
+          "score": 0.02646747862267554,
+          "spearman_rho": -0.39948167245810945
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.02586631350722557,
+          "spearman_rho": -0.0037138421245989034
+        },
+        {
+          "variable": "slope",
+          "score": 0.01758759760933407,
+          "spearman_rho": -0.3685405392361517
+        }
+      ]
+    },
+    "A06": {
+      "primary_variable": "tree_cover",
+      "primary_variable_zh": "\u6811\u51a0\u8986\u76d6\u7387",
+      "category": "vegetation",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.712801496164448,
+      "rf_importance": 0.057641936785753814,
+      "transformer_importance": 0.07645556378641823,
+      "combined_support": 0.05375865615975528,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "slope",
+        "transformer": "tree_cover"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.948007173832578,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "tree_cover",
+          "score": 0.05375865615975528,
+          "spearman_rho": -0.712801496164448
+        },
+        {
+          "variable": "slope",
+          "score": 0.05170227316215285,
+          "spearman_rho": -0.6801635539563476
+        },
+        {
+          "variable": "ndvi_max",
+          "score": 0.04037193092781804,
+          "spearman_rho": -0.5642494391899847
+        }
+      ]
+    },
+    "A07": {
+      "primary_variable": "impervious_surface",
+      "primary_variable_zh": "\u5efa\u6210\u533a\u6bd4\u4f8b",
+      "category": "urban",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.7579053604721394,
+      "rf_importance": 0.03060463059829127,
+      "transformer_importance": 0.014216258273432349,
+      "combined_support": 0.024850790147031593,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "tree_cover",
+        "transformer": "impervious_surface"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.970999527486386,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "tree_cover",
+          "score": 0.028310353032544724,
+          "spearman_rho": 0.697703551772482
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.024850790147031593,
+          "spearman_rho": -0.7579053604721394
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.0234262302193132,
+          "spearman_rho": 0.2733141420692651
+        }
+      ]
+    },
+    "A08": {
+      "primary_variable": "elevation",
+      "primary_variable_zh": "\u9ad8\u7a0b",
+      "category": "terrain",
+      "unit": "m",
+      "direction": "positive",
+      "spearman_rho": 0.8686630326098376,
+      "rf_importance": 0.5313176463197391,
+      "transformer_importance": 0.005098433763576463,
+      "combined_support": 0.18862988502721686,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "elevation",
+        "transformer": "soil_ph"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "random_forest"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9706646804905952,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "elevation",
+          "score": 0.18862988502721686,
+          "spearman_rho": 0.8686630326098376
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.11671574569795995,
+          "spearman_rho": 0.7935126286402914
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.11234017714528362,
+          "spearman_rho": -0.7926284025385469
+        }
+      ]
+    },
+    "A09": {
+      "primary_variable": "slope",
+      "primary_variable_zh": "\u5761\u5ea6",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "negative",
+      "spearman_rho": -0.4749858535375968,
+      "rf_importance": 0.029009334307106265,
+      "transformer_importance": 0.014713301545447689,
+      "combined_support": 0.02097938380210468,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "annual_et",
+        "transformer": "flow_accumulation"
+      },
+      "agreeing_methods": [],
+      "agreement_count": 0,
+      "concordant": false,
+      "temporal_stability_r": 0.9166953544422024,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "slope",
+          "score": 0.02097938380210468,
+          "spearman_rho": -0.4749858535375968
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.015731325392271168,
+          "spearman_rho": 0.1437895304494979
+        },
+        {
+          "variable": "annual_et",
+          "score": 0.015372701278199043,
+          "spearman_rho": -0.08806605543000294
+        }
+      ]
+    },
+    "A10": {
+      "primary_variable": "clay_fraction",
+      "primary_variable_zh": "\u9ecf\u571f\u6bd4\u4f8b",
+      "category": "soil",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.2481513237653701,
+      "rf_importance": 0.03167509340547628,
+      "transformer_importance": 0.05276815614695435,
+      "combined_support": 0.03620309876691107,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "clay_fraction",
+        "transformer": "tree_cover"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.963187316074629,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "clay_fraction",
+          "score": 0.03620309876691107,
+          "spearman_rho": -0.2481513237653701
+        },
+        {
+          "variable": "nighttime_lights",
+          "score": 0.03317641362999383,
+          "spearman_rho": 0.42128199783666603
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.028436477730999637,
+          "spearman_rho": -0.6504898640513924
+        }
+      ]
+    },
+    "A11": {
+      "primary_variable": "flow_accumulation",
+      "primary_variable_zh": "\u6c47\u6d41\u7d2f\u79ef\uff08\u5bf9\u6570\uff09",
+      "category": "terrain",
+      "unit": "log(cell count + 1)",
+      "direction": "negative",
+      "spearman_rho": -0.265965185699797,
+      "rf_importance": 0.14722370490394412,
+      "transformer_importance": 0.07622111024653278,
+      "combined_support": 0.08537962198410526,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "flow_accumulation",
+        "transformer": "slope"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9522849624023718,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "flow_accumulation",
+          "score": 0.08537962198410526,
+          "spearman_rho": -0.265965185699797
+        },
+        {
+          "variable": "slope",
+          "score": 0.03927591281708479,
+          "spearman_rho": 0.6167091829244981
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.02685143355038493,
+          "spearman_rho": 0.211128928924109
+        }
+      ]
+    },
+    "A12": {
+      "primary_variable": "aspect",
+      "primary_variable_zh": "\u5761\u5411",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "negative",
+      "spearman_rho": -0.05284150591007062,
+      "rf_importance": 0.010601466348973996,
+      "transformer_importance": 0.025762109790948538,
+      "combined_support": 0.01845639921072266,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "soil_ph",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9463822055551515,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "aspect",
+          "score": 0.01845639921072266,
+          "spearman_rho": -0.05284150591007062
+        },
+        {
+          "variable": "soil_ph",
+          "score": 0.013584236418116617,
+          "spearman_rho": 0.3623298825848625
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.013097841592919116,
+          "spearman_rho": 0.18132684295703722
+        }
+      ]
+    },
+    "A13": {
+      "primary_variable": "annual_runoff",
+      "primary_variable_zh": "\u5e74\u5f84\u6d41\u91cf",
+      "category": "hydrology",
+      "unit": "mm",
+      "direction": "negative",
+      "spearman_rho": -0.3577237788607077,
+      "rf_importance": 0.18101299888113156,
+      "transformer_importance": 0.04766121757497085,
+      "combined_support": 0.09139698944717627,
+      "method_choices": {
+        "spearman": "population_density",
+        "random_forest": "annual_runoff",
+        "transformer": "annual_runoff"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9684298286236829,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "annual_runoff",
+          "score": 0.09139698944717627,
+          "spearman_rho": -0.3577237788607077
+        },
+        {
+          "variable": "annual_precip",
+          "score": 0.06371849594362018,
+          "spearman_rho": -0.2705231145436481
+        },
+        {
+          "variable": "nighttime_lights",
+          "score": 0.05310170557911739,
+          "spearman_rho": -0.4101116986294013
+        }
+      ]
+    },
+    "A14": {
+      "primary_variable": "flow_accumulation",
+      "primary_variable_zh": "\u6c47\u6d41\u7d2f\u79ef\uff08\u5bf9\u6570\uff09",
+      "category": "terrain",
+      "unit": "log(cell count + 1)",
+      "direction": "positive",
+      "spearman_rho": 0.21186021278762054,
+      "rf_importance": 0.05386331235039575,
+      "transformer_importance": 0.0,
+      "combined_support": 0.02663548410860334,
+      "method_choices": {
+        "spearman": "slope",
+        "random_forest": "flow_accumulation",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.6516776820674111,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "flow_accumulation",
+          "score": 0.02663548410860334,
+          "spearman_rho": 0.21186021278762054
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.01592983044884051,
+          "spearman_rho": -0.1547103018791381
+        },
+        {
+          "variable": "aspect",
+          "score": 0.013689774048694115,
+          "spearman_rho": -0.03305187485914752
+        }
+      ]
+    },
+    "A15": {
+      "primary_variable": "impervious_surface",
+      "primary_variable_zh": "\u5efa\u6210\u533a\u6bd4\u4f8b",
+      "category": "urban",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.32110927045845084,
+      "rf_importance": 0.01844961932220587,
+      "transformer_importance": 0.0821882548857497,
+      "combined_support": 0.03774483515622477,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "lai_mean",
+        "transformer": "impervious_surface"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.7115826275176419,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "impervious_surface",
+          "score": 0.03774483515622477,
+          "spearman_rho": -0.32110927045845084
+        },
+        {
+          "variable": "lst_nighttime",
+          "score": 0.03335525779886842,
+          "spearman_rho": 0.14411386588762928
+        },
+        {
+          "variable": "air_temp_mean",
+          "score": 0.028389097514291195,
+          "spearman_rho": 0.18114285130831245
+        }
+      ]
+    },
+    "A16": {
+      "primary_variable": "population_density",
+      "primary_variable_zh": "\u4eba\u53e3\u5bc6\u5ea6",
+      "category": "urban",
+      "unit": "people/km2",
+      "direction": "positive",
+      "spearman_rho": 0.2794642253755469,
+      "rf_importance": 0.02369707253384991,
+      "transformer_importance": 0.0546362258024111,
+      "combined_support": 0.030513803405669043,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "elevation",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.8790961817712192,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "population_density",
+          "score": 0.030513803405669043,
+          "spearman_rho": 0.2794642253755469
+        },
+        {
+          "variable": "elevation",
+          "score": 0.024860151570353664,
+          "spearman_rho": -0.1512020553772516
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.01687991291956984,
+          "spearman_rho": 0.29297500428701617
+        }
+      ]
+    },
+    "A17": {
+      "primary_variable": "water_capacity",
+      "primary_variable_zh": "\u7530\u95f4\u6301\u6c34\u91cf",
+      "category": "soil",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.18930837913149307,
+      "rf_importance": 0.101303418213025,
+      "transformer_importance": 0.05137811437357057,
+      "combined_support": 0.05456806413948103,
+      "method_choices": {
+        "spearman": "soil_moisture",
+        "random_forest": "water_capacity",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.7715485803346249,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "water_capacity",
+          "score": 0.05456806413948103,
+          "spearman_rho": -0.18930837913149307
+        },
+        {
+          "variable": "aspect",
+          "score": 0.04099755868576386,
+          "spearman_rho": 0.10655691821660111
+        },
+        {
+          "variable": "soil_moisture",
+          "score": 0.03229647718485782,
+          "spearman_rho": -0.2840408099682326
+        }
+      ]
+    },
+    "A18": {
+      "primary_variable": "nighttime_lights",
+      "primary_variable_zh": "\u591c\u95f4\u706f\u5149",
+      "category": "urban",
+      "unit": "nW/cm2/sr",
+      "direction": "positive",
+      "spearman_rho": 0.19822851679354125,
+      "rf_importance": 0.00968033167498362,
+      "transformer_importance": 0.015989240580314607,
+      "combined_support": 0.01357404455669263,
+      "method_choices": {
+        "spearman": "albedo",
+        "random_forest": "soil_ph",
+        "transformer": "max_monthly_precip"
+      },
+      "agreeing_methods": [],
+      "agreement_count": 0,
+      "concordant": false,
+      "temporal_stability_r": 0.6275588786828201,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "nighttime_lights",
+          "score": 0.01357404455669263,
+          "spearman_rho": 0.19822851679354125
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.012978103134294537,
+          "spearman_rho": 0.1955978038286526
+        },
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.01179925267278357,
+          "spearman_rho": -0.08096455999820376
+        }
+      ]
+    },
+    "A19": {
+      "primary_variable": "elevation",
+      "primary_variable_zh": "\u9ad8\u7a0b",
+      "category": "terrain",
+      "unit": "m",
+      "direction": "negative",
+      "spearman_rho": -0.7203021600548476,
+      "rf_importance": 0.05837048929422895,
+      "transformer_importance": 0.13531604467756944,
+      "combined_support": 0.07270875072704004,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "lai_mean",
+        "transformer": "elevation"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9436321708174485,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "lai_mean",
+          "score": 0.12314738483914965,
+          "spearman_rho": -0.5638908899387992
+        },
+        {
+          "variable": "dew_point_temp",
+          "score": 0.11986204921936644,
+          "spearman_rho": 0.5512691549539094
+        },
+        {
+          "variable": "elevation",
+          "score": 0.07270875072704004,
+          "spearman_rho": -0.7203021600548476
+        }
+      ]
+    },
+    "A20": {
+      "primary_variable": "nighttime_lights",
+      "primary_variable_zh": "\u591c\u95f4\u706f\u5149",
+      "category": "urban",
+      "unit": "nW/cm2/sr",
+      "direction": "positive",
+      "spearman_rho": 0.3266246097591346,
+      "rf_importance": 0.0055437241004347914,
+      "transformer_importance": 0.049732175332596634,
+      "combined_support": 0.026692756443899946,
+      "method_choices": {
+        "spearman": "nighttime_lights",
+        "random_forest": "tree_cover",
+        "transformer": "nighttime_lights"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.6892130000758931,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "nighttime_lights",
+          "score": 0.026692756443899946,
+          "spearman_rho": 0.3266246097591346
+        },
+        {
+          "variable": "population_density",
+          "score": 0.018489623351987474,
+          "spearman_rho": 0.21103356536198936
+        },
+        {
+          "variable": "soil_moisture",
+          "score": 0.017000450283424094,
+          "spearman_rho": -0.1917211560936929
+        }
+      ]
+    },
+    "A21": {
+      "primary_variable": "elevation",
+      "primary_variable_zh": "\u9ad8\u7a0b",
+      "category": "terrain",
+      "unit": "m",
+      "direction": "negative",
+      "spearman_rho": -0.7951078372611466,
+      "rf_importance": 0.01779322368285947,
+      "transformer_importance": 0.09118161410193153,
+      "combined_support": 0.045317566232315885,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "air_temp_mean",
+        "transformer": "tree_cover"
+      },
+      "agreeing_methods": [
+        "spearman"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9478647710920922,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "elevation",
+          "score": 0.045317566232315885,
+          "spearman_rho": -0.7951078372611466
+        },
+        {
+          "variable": "water_capacity",
+          "score": 0.04369477465322549,
+          "spearman_rho": -0.4472547205407529
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.04302319690463143,
+          "spearman_rho": -0.6826453131684156
+        }
+      ]
+    },
+    "A22": {
+      "primary_variable": "soil_moisture",
+      "primary_variable_zh": "\u8868\u5c42\u571f\u58e4\u6e7f\u5ea6",
+      "category": "hydrology",
+      "unit": "m3/m3",
+      "direction": "negative",
+      "spearman_rho": -0.2305753899816449,
+      "rf_importance": 0.0323103441126982,
+      "transformer_importance": 0.04198554375389138,
+      "combined_support": 0.03102238799168637,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "soil_moisture",
+        "transformer": "soil_moisture"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9124064139207054,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "soil_moisture",
+          "score": 0.03102238799168637,
+          "spearman_rho": -0.2305753899816449
+        },
+        {
+          "variable": "annual_precip",
+          "score": 0.02696572263761997,
+          "spearman_rho": -0.23874714322232626
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.023791195136079534,
+          "spearman_rho": -0.23666393557147358
+        }
+      ]
+    },
+    "A23": {
+      "primary_variable": "dew_point_temp",
+      "primary_variable_zh": "\u5e74\u5747\u9732\u70b9\u6e29\u5ea6",
+      "category": "temperature",
+      "unit": "degC",
+      "direction": "positive",
+      "spearman_rho": 0.2593964317850187,
+      "rf_importance": 0.06231898059364515,
+      "transformer_importance": 0.002484745285515275,
+      "combined_support": 0.02737636051591652,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "dew_point_temp",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9582745511550306,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "dew_point_temp",
+          "score": 0.02737636051591652,
+          "spearman_rho": 0.2593964317850187
+        },
+        {
+          "variable": "slope",
+          "score": 0.02416370912587434,
+          "spearman_rho": -0.5400949234931245
+        },
+        {
+          "variable": "population_density",
+          "score": 0.01703895204499988,
+          "spearman_rho": 0.4307238709697157
+        }
+      ]
+    },
+    "A24": {
+      "primary_variable": "flow_accumulation",
+      "primary_variable_zh": "\u6c47\u6d41\u7d2f\u79ef\uff08\u5bf9\u6570\uff09",
+      "category": "terrain",
+      "unit": "log(cell count + 1)",
+      "direction": "negative",
+      "spearman_rho": -0.18794768901185763,
+      "rf_importance": 0.013630113880649535,
+      "transformer_importance": 0.019864958443640893,
+      "combined_support": 0.01886624670291877,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "flow_accumulation",
+        "transformer": "flow_accumulation"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9431403849678855,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "flow_accumulation",
+          "score": 0.01886624670291877,
+          "spearman_rho": -0.18794768901185763
+        },
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.012591471895514383,
+          "spearman_rho": -0.2267481053402262
+        },
+        {
+          "variable": "aspect",
+          "score": 0.012465150995119925,
+          "spearman_rho": 0.07736620107904105
+        }
+      ]
+    },
+    "A25": {
+      "primary_variable": "clay_fraction",
+      "primary_variable_zh": "\u9ecf\u571f\u6bd4\u4f8b",
+      "category": "soil",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.27931045989252323,
+      "rf_importance": 0.013928018787185793,
+      "transformer_importance": 0.03538025594026302,
+      "combined_support": 0.02550291087063582,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "organic_carbon",
+        "transformer": "clay_fraction"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9677764726677132,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "clay_fraction",
+          "score": 0.02550291087063582,
+          "spearman_rho": -0.27931045989252323
+        },
+        {
+          "variable": "organic_carbon",
+          "score": 0.021612525336373437,
+          "spearman_rho": -0.5303229594730176
+        },
+        {
+          "variable": "aspect",
+          "score": 0.020466030939694384,
+          "spearman_rho": 0.04043616446262735
+        }
+      ]
+    },
+    "A26": {
+      "primary_variable": "clay_fraction",
+      "primary_variable_zh": "\u9ecf\u571f\u6bd4\u4f8b",
+      "category": "soil",
+      "unit": "%",
+      "direction": "positive",
+      "spearman_rho": 0.16270738501683096,
+      "rf_importance": 0.019543044949074096,
+      "transformer_importance": 0.021086302591518554,
+      "combined_support": 0.018824831606624515,
+      "method_choices": {
+        "spearman": "slope",
+        "random_forest": "max_monthly_precip",
+        "transformer": "annual_runoff"
+      },
+      "agreeing_methods": [],
+      "agreement_count": 0,
+      "concordant": false,
+      "temporal_stability_r": 0.39922346873799874,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "clay_fraction",
+          "score": 0.018824831606624515,
+          "spearman_rho": 0.16270738501683096
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.017420606008690834,
+          "spearman_rho": -0.14220412825532053
+        },
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.016626538812904046,
+          "spearman_rho": 0.08307711735087855
+        }
+      ]
+    },
+    "A27": {
+      "primary_variable": "soil_moisture",
+      "primary_variable_zh": "\u8868\u5c42\u571f\u58e4\u6e7f\u5ea6",
+      "category": "hydrology",
+      "unit": "m3/m3",
+      "direction": "negative",
+      "spearman_rho": -0.4765092351083314,
+      "rf_importance": 0.22167720621299103,
+      "transformer_importance": 0.06346919698523326,
+      "combined_support": 0.10797976538272935,
+      "method_choices": {
+        "spearman": "soil_moisture",
+        "random_forest": "soil_moisture",
+        "transformer": "lst_nighttime"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "random_forest"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.901959284498424,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "soil_moisture",
+          "score": 0.10797976538272935,
+          "spearman_rho": -0.4765092351083314
+        },
+        {
+          "variable": "lst_daytime",
+          "score": 0.09571006932124891,
+          "spearman_rho": 0.46621235565555785
+        },
+        {
+          "variable": "lst_nighttime",
+          "score": 0.06255503511795125,
+          "spearman_rho": 0.38682469093032756
+        }
+      ]
+    },
+    "A28": {
+      "primary_variable": "max_monthly_precip",
+      "primary_variable_zh": "\u6700\u5927\u6708\u964d\u6c34\u91cf",
+      "category": "climate",
+      "unit": "mm",
+      "direction": "positive",
+      "spearman_rho": 0.29158082507079974,
+      "rf_importance": 0.1804523254650115,
+      "transformer_importance": 0.0,
+      "combined_support": 0.07382706941224415,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "max_monthly_precip",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9587686253127589,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.07382706941224415,
+          "spearman_rho": 0.29158082507079974
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.051229726998547116,
+          "spearman_rho": -0.2864208186530903
+        },
+        {
+          "variable": "aspect",
+          "score": 0.025388141771607076,
+          "spearman_rho": -0.014633936184031556
+        }
+      ]
+    },
+    "A29": {
+      "primary_variable": "flow_accumulation",
+      "primary_variable_zh": "\u6c47\u6d41\u7d2f\u79ef\uff08\u5bf9\u6570\uff09",
+      "category": "terrain",
+      "unit": "log(cell count + 1)",
+      "direction": "negative",
+      "spearman_rho": -0.18574146916992998,
+      "rf_importance": 0.04566768135605831,
+      "transformer_importance": 0.11606250359899181,
+      "combined_support": 0.06152088361330188,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "flow_accumulation",
+        "transformer": "flow_accumulation"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9445275183952059,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "flow_accumulation",
+          "score": 0.06152088361330188,
+          "spearman_rho": -0.18574146916992998
+        },
+        {
+          "variable": "annual_precip",
+          "score": 0.04698814939607987,
+          "spearman_rho": -0.24526136560746048
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.041665725395017505,
+          "spearman_rho": -0.21987487748909748
+        }
+      ]
+    },
+    "A30": {
+      "primary_variable": "lst_nighttime",
+      "primary_variable_zh": "\u591c\u95f4\u5730\u8868\u6e29\u5ea6",
+      "category": "temperature",
+      "unit": "degC",
+      "direction": "positive",
+      "spearman_rho": 0.3261988900460626,
+      "rf_importance": 0.03707011699984093,
+      "transformer_importance": 0.10608630608787632,
+      "combined_support": 0.055788648099505976,
+      "method_choices": {
+        "spearman": "soil_moisture",
+        "random_forest": "lst_nighttime",
+        "transformer": "lst_nighttime"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.899290226880331,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "lst_nighttime",
+          "score": 0.055788648099505976,
+          "spearman_rho": 0.3261988900460626
+        },
+        {
+          "variable": "air_temp_mean",
+          "score": 0.04460811234222637,
+          "spearman_rho": 0.35650425074431286
+        },
+        {
+          "variable": "annual_et",
+          "score": 0.0430738441097144,
+          "spearman_rho": 0.2900355075814362
+        }
+      ]
+    },
+    "A31": {
+      "primary_variable": "organic_carbon",
+      "primary_variable_zh": "\u571f\u58e4\u6709\u673a\u78b3",
+      "category": "soil",
+      "unit": "g/kg",
+      "direction": "positive",
+      "spearman_rho": 0.5816112428803707,
+      "rf_importance": 0.16505806037403367,
+      "transformer_importance": 0.10201371859463393,
+      "combined_support": 0.09902705892884134,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "organic_carbon",
+        "transformer": "organic_carbon"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9825981089778042,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "organic_carbon",
+          "score": 0.09902705892884134,
+          "spearman_rho": 0.5816112428803707
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.03597282819499497,
+          "spearman_rho": -0.20274879648455932
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.031168059285458054,
+          "spearman_rho": 0.5553321882817024
+        }
+      ]
+    },
+    "A32": {
+      "primary_variable": "impervious_surface",
+      "primary_variable_zh": "\u5efa\u6210\u533a\u6bd4\u4f8b",
+      "category": "urban",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.7353230886303797,
+      "rf_importance": 0.028184243775585004,
+      "transformer_importance": 0.00978892486423866,
+      "combined_support": 0.02227292727411873,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "impervious_surface",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9623319552663538,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "impervious_surface",
+          "score": 0.02227292727411873,
+          "spearman_rho": -0.7353230886303797
+        },
+        {
+          "variable": "population_density",
+          "score": 0.020840045682503482,
+          "spearman_rho": -0.6077714262040578
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.01790886826711363,
+          "spearman_rho": 0.2678553846564976
+        }
+      ]
+    },
+    "A33": {
+      "primary_variable": "albedo",
+      "primary_variable_zh": "\u77ed\u6ce2\u53cd\u7167\u7387",
+      "category": "vegetation",
+      "unit": "fraction",
+      "direction": "negative",
+      "spearman_rho": -0.06480356990982475,
+      "rf_importance": 0.06605894871220105,
+      "transformer_importance": 0.03241938540585412,
+      "combined_support": 0.034380586970591195,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "albedo",
+        "transformer": "max_monthly_precip"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9408158339508487,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "albedo",
+          "score": 0.034380586970591195,
+          "spearman_rho": -0.06480356990982475
+        },
+        {
+          "variable": "soil_ph",
+          "score": 0.03297945240967983,
+          "spearman_rho": -0.39149099193929965
+        },
+        {
+          "variable": "lai_mean",
+          "score": 0.026385598392448122,
+          "spearman_rho": -0.026844870632479024
+        }
+      ]
+    },
+    "A34": {
+      "primary_variable": "evi_mean",
+      "primary_variable_zh": "\u5e74\u5747EVI",
+      "category": "vegetation",
+      "unit": "index",
+      "direction": "negative",
+      "spearman_rho": -0.6548126438508554,
+      "rf_importance": 0.19077813836521837,
+      "transformer_importance": 0.015977028334233482,
+      "combined_support": 0.08122562330555999,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "evi_mean",
+        "transformer": "albedo"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9519494651310835,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "evi_mean",
+          "score": 0.08122562330555999,
+          "spearman_rho": -0.6548126438508554
+        },
+        {
+          "variable": "ndvi_max",
+          "score": 0.07378344416516391,
+          "spearman_rho": -0.5813823891598674
+        },
+        {
+          "variable": "ndvi_mean",
+          "score": 0.06598191674940367,
+          "spearman_rho": -0.6155944276019628
+        }
+      ]
+    },
+    "A35": {
+      "primary_variable": "population_density",
+      "primary_variable_zh": "\u4eba\u53e3\u5bc6\u5ea6",
+      "category": "urban",
+      "unit": "people/km2",
+      "direction": "positive",
+      "spearman_rho": 0.10579119640380921,
+      "rf_importance": 0.04966064198207085,
+      "transformer_importance": 0.07369871384675694,
+      "combined_support": 0.04278642907921921,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "population_density",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.867289141811609,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "population_density",
+          "score": 0.04278642907921921,
+          "spearman_rho": 0.10579119640380921
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.03280964039538287,
+          "spearman_rho": 0.1593785518894255
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.028695615515224083,
+          "spearman_rho": -0.3738475174590858
+        }
+      ]
+    },
+    "A36": {
+      "primary_variable": "impervious_surface",
+      "primary_variable_zh": "\u5efa\u6210\u533a\u6bd4\u4f8b",
+      "category": "urban",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.10111316598559149,
+      "rf_importance": 0.07884669558502613,
+      "transformer_importance": 0.14761319113575969,
+      "combined_support": 0.0768088011233685,
+      "method_choices": {
+        "spearman": "ndvi_max",
+        "random_forest": "annual_et",
+        "transformer": "impervious_surface"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.8687531993534028,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "impervious_surface",
+          "score": 0.0768088011233685,
+          "spearman_rho": -0.10111316598559149
+        },
+        {
+          "variable": "annual_et",
+          "score": 0.06625084209947578,
+          "spearman_rho": 0.346460137745246
+        },
+        {
+          "variable": "ndvi_max",
+          "score": 0.06018290663061109,
+          "spearman_rho": -0.41555269808159295
+        }
+      ]
+    },
+    "A37": {
+      "primary_variable": "aspect",
+      "primary_variable_zh": "\u5761\u5411",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "positive",
+      "spearman_rho": 0.02874223481640877,
+      "rf_importance": 0.08395205499653828,
+      "transformer_importance": 0.05731974730320669,
+      "combined_support": 0.050536528523268315,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "aspect",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9564482677867419,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "aspect",
+          "score": 0.050536528523268315,
+          "spearman_rho": 0.02874223481640877
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.02430784188303059,
+          "spearman_rho": -0.27259148427914126
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.02002547251712415,
+          "spearman_rho": -0.6835058044374138
+        }
+      ]
+    },
+    "A38": {
+      "primary_variable": "annual_precip",
+      "primary_variable_zh": "\u5e74\u964d\u6c34\u91cf",
+      "category": "climate",
+      "unit": "mm",
+      "direction": "negative",
+      "spearman_rho": -0.23272724543636866,
+      "rf_importance": 0.10692534788382907,
+      "transformer_importance": 0.0073881232935903395,
+      "combined_support": 0.04821375930284948,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "annual_precip",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.8611989944962668,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "annual_precip",
+          "score": 0.04821375930284948,
+          "spearman_rho": -0.23272724543636866
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.03798665270109494,
+          "spearman_rho": -0.19195739674450188
+        },
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.019899846826736216,
+          "spearman_rho": -0.13009224288763196
+        }
+      ]
+    },
+    "A39": {
+      "primary_variable": "albedo",
+      "primary_variable_zh": "\u77ed\u6ce2\u53cd\u7167\u7387",
+      "category": "vegetation",
+      "unit": "fraction",
+      "direction": "negative",
+      "spearman_rho": -0.3813722357249211,
+      "rf_importance": 0.015623063256751803,
+      "transformer_importance": 0.012452528470182243,
+      "combined_support": 0.018506696872319924,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "population_density",
+        "transformer": "organic_carbon"
+      },
+      "agreeing_methods": [],
+      "agreement_count": 0,
+      "concordant": false,
+      "temporal_stability_r": 0.9218441425396736,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "albedo",
+          "score": 0.018506696872319924,
+          "spearman_rho": -0.3813722357249211
+        },
+        {
+          "variable": "organic_carbon",
+          "score": 0.01727006317747495,
+          "spearman_rho": -0.1627906153827075
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.016822127650754807,
+          "spearman_rho": -0.1989816330215351
+        }
+      ]
+    },
+    "A40": {
+      "primary_variable": "nighttime_lights",
+      "primary_variable_zh": "\u591c\u95f4\u706f\u5149",
+      "category": "urban",
+      "unit": "nW/cm2/sr",
+      "direction": "negative",
+      "spearman_rho": -0.4083167051907714,
+      "rf_importance": 0.03173098963894916,
+      "transformer_importance": 0.08810456057488927,
+      "combined_support": 0.05028041397752775,
+      "method_choices": {
+        "spearman": "nighttime_lights",
+        "random_forest": "water_capacity",
+        "transformer": "nighttime_lights"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9221440602280522,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "nighttime_lights",
+          "score": 0.05028041397752775,
+          "spearman_rho": -0.4083167051907714
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.030913632817999425,
+          "spearman_rho": -0.22971421146191295
+        },
+        {
+          "variable": "water_capacity",
+          "score": 0.02843200540181903,
+          "spearman_rho": -0.09257341033219642
+        }
+      ]
+    },
+    "A41": {
+      "primary_variable": "lai_mean",
+      "primary_variable_zh": "\u5e74\u5747\u53f6\u9762\u79ef\u6307\u6570",
+      "category": "vegetation",
+      "unit": "m2/m2",
+      "direction": "positive",
+      "spearman_rho": 0.4526015216987067,
+      "rf_importance": 0.11521876390994941,
+      "transformer_importance": 0.0,
+      "combined_support": 0.04820371856509536,
+      "method_choices": {
+        "spearman": "evi_mean",
+        "random_forest": "lai_mean",
+        "transformer": "flow_accumulation"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9264259426383448,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "lai_mean",
+          "score": 0.04820371856509536,
+          "spearman_rho": 0.4526015216987067
+        },
+        {
+          "variable": "air_temp_mean",
+          "score": 0.046972361231030574,
+          "spearman_rho": -0.47200354704731556
+        },
+        {
+          "variable": "ndvi_mean",
+          "score": 0.04519726945901778,
+          "spearman_rho": 0.5239463545722584
+        }
+      ]
+    },
+    "A42": {
+      "primary_variable": "impervious_surface",
+      "primary_variable_zh": "\u5efa\u6210\u533a\u6bd4\u4f8b",
+      "category": "urban",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.5279751029501357,
+      "rf_importance": 0.005134828246442316,
+      "transformer_importance": 0.11026386386453638,
+      "combined_support": 0.04537011908741503,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "organic_carbon",
+        "transformer": "impervious_surface"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9495265412613305,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "organic_carbon",
+          "score": 0.0648240049272301,
+          "spearman_rho": 0.49500989901949466
+        },
+        {
+          "variable": "annual_et",
+          "score": 0.04635512740841901,
+          "spearman_rho": 0.1548947415232978
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.04537011908741503,
+          "spearman_rho": -0.5279751029501357
+        }
+      ]
+    },
+    "A43": {
+      "primary_variable": "annual_runoff",
+      "primary_variable_zh": "\u5e74\u5f84\u6d41\u91cf",
+      "category": "hydrology",
+      "unit": "mm",
+      "direction": "negative",
+      "spearman_rho": -0.34897089680732113,
+      "rf_importance": 0.10974334173665239,
+      "transformer_importance": 0.14950471692347558,
+      "combined_support": 0.10121703145498119,
+      "method_choices": {
+        "spearman": "annual_runoff",
+        "random_forest": "annual_runoff",
+        "transformer": "annual_runoff"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 3,
+      "concordant": true,
+      "temporal_stability_r": 0.47327113962451667,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "annual_runoff",
+          "score": 0.10121703145498119,
+          "spearman_rho": -0.34897089680732113
+        },
+        {
+          "variable": "annual_precip",
+          "score": 0.05803751351418612,
+          "spearman_rho": -0.26570089421506765
+        },
+        {
+          "variable": "annual_et",
+          "score": 0.051032829240969434,
+          "spearman_rho": 0.12859787210360918
+        }
+      ]
+    },
+    "A44": {
+      "primary_variable": "nighttime_lights",
+      "primary_variable_zh": "\u591c\u95f4\u706f\u5149",
+      "category": "urban",
+      "unit": "nW/cm2/sr",
+      "direction": "positive",
+      "spearman_rho": 0.10917904774538925,
+      "rf_importance": 0.016058985130176708,
+      "transformer_importance": 0.02699019327120816,
+      "combined_support": 0.017113244299559658,
+      "method_choices": {
+        "spearman": "soil_moisture",
+        "random_forest": "annual_et",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [],
+      "agreement_count": 0,
+      "concordant": false,
+      "temporal_stability_r": 0.5018454844353284,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "nighttime_lights",
+          "score": 0.017113244299559658,
+          "spearman_rho": 0.10917904774538925
+        },
+        {
+          "variable": "population_density",
+          "score": 0.015783155338142053,
+          "spearman_rho": 0.18641483612301965
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.013367932110740319,
+          "spearman_rho": -0.12598947897623808
+        }
+      ]
+    },
+    "A45": {
+      "primary_variable": "aspect",
+      "primary_variable_zh": "\u5761\u5411",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "negative",
+      "spearman_rho": -0.09713964748475235,
+      "rf_importance": 0.014631282302360668,
+      "transformer_importance": 0.0028661978055278476,
+      "combined_support": 0.01747863743848897,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "dew_point_temp",
+        "transformer": "organic_carbon"
+      },
+      "agreeing_methods": [],
+      "agreement_count": 0,
+      "concordant": false,
+      "temporal_stability_r": 0.9468799528472809,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "aspect",
+          "score": 0.01747863743848897,
+          "spearman_rho": -0.09713964748475235
+        },
+        {
+          "variable": "organic_carbon",
+          "score": 0.015402289233209637,
+          "spearman_rho": -0.3079574178794484
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.015017749203748008,
+          "spearman_rho": 0.2368556600195961
+        }
+      ]
+    },
+    "A46": {
+      "primary_variable": "water_capacity",
+      "primary_variable_zh": "\u7530\u95f4\u6301\u6c34\u91cf",
+      "category": "soil",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.4850651305301299,
+      "rf_importance": 0.011384766237743985,
+      "transformer_importance": 0.10991616623774639,
+      "combined_support": 0.04984810317444014,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "organic_carbon",
+        "transformer": "tree_cover"
+      },
+      "agreeing_methods": [],
+      "agreement_count": 0,
+      "concordant": false,
+      "temporal_stability_r": 0.9684047013185129,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "water_capacity",
+          "score": 0.04984810317444014,
+          "spearman_rho": -0.4850651305301299
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.048602665013720375,
+          "spearman_rho": -0.4862275824150902
+        },
+        {
+          "variable": "slope",
+          "score": 0.043009521060797,
+          "spearman_rho": -0.4628402202362806
+        }
+      ]
+    },
+    "A47": {
+      "primary_variable": "aspect",
+      "primary_variable_zh": "\u5761\u5411",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "positive",
+      "spearman_rho": 0.07052398343227108,
+      "rf_importance": 0.08454230503266637,
+      "transformer_importance": 0.0,
+      "combined_support": 0.03663594079597018,
+      "method_choices": {
+        "spearman": "water_capacity",
+        "random_forest": "aspect",
+        "transformer": "slope"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.8981904988962683,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "aspect",
+          "score": 0.03663594079597018,
+          "spearman_rho": 0.07052398343227108
+        },
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.02269721640620091,
+          "spearman_rho": -0.20200893401768227
+        },
+        {
+          "variable": "slope",
+          "score": 0.02216972794522827,
+          "spearman_rho": 0.411107892035741
+        }
+      ]
+    },
+    "A48": {
+      "primary_variable": "aspect",
+      "primary_variable_zh": "\u5761\u5411",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "positive",
+      "spearman_rho": 0.12127650640797268,
+      "rf_importance": 0.03246975642733946,
+      "transformer_importance": 0.016090270500048402,
+      "combined_support": 0.030726605551692866,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "aspect",
+        "transformer": "water_capacity"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.7044914905494787,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "aspect",
+          "score": 0.030726605551692866,
+          "spearman_rho": 0.12127650640797268
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.011582413758587975,
+          "spearman_rho": 0.40913855953819284
+        },
+        {
+          "variable": "water_capacity",
+          "score": 0.009964263619267515,
+          "spearman_rho": 0.10774691622668456
+        }
+      ]
+    },
+    "A49": {
+      "primary_variable": "lst_daytime",
+      "primary_variable_zh": "\u65e5\u95f4\u5730\u8868\u6e29\u5ea6",
+      "category": "temperature",
+      "unit": "degC",
+      "direction": "positive",
+      "spearman_rho": 0.1510865629335837,
+      "rf_importance": 0.01792998398525372,
+      "transformer_importance": 0.03276290957955426,
+      "combined_support": 0.020419010418158436,
+      "method_choices": {
+        "spearman": "water_capacity",
+        "random_forest": "lst_daytime",
+        "transformer": "soil_ph"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.6281357140335068,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "lst_daytime",
+          "score": 0.020419010418158436,
+          "spearman_rho": 0.1510865629335837
+        },
+        {
+          "variable": "soil_ph",
+          "score": 0.016262654993087974,
+          "spearman_rho": 0.099465806763425
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.013903440506989708,
+          "spearman_rho": 0.06490391448733972
+        }
+      ]
+    },
+    "A50": {
+      "primary_variable": "nighttime_lights",
+      "primary_variable_zh": "\u591c\u95f4\u706f\u5149",
+      "category": "urban",
+      "unit": "nW/cm2/sr",
+      "direction": "negative",
+      "spearman_rho": -0.29618715715735877,
+      "rf_importance": 0.04996609237342799,
+      "transformer_importance": 0.1011114998629412,
+      "combined_support": 0.05785622734756809,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "annual_precip",
+        "transformer": "nighttime_lights"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9306138267884979,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "nighttime_lights",
+          "score": 0.05785622734756809,
+          "spearman_rho": -0.29618715715735877
+        },
+        {
+          "variable": "annual_precip",
+          "score": 0.04742296476649732,
+          "spearman_rho": -0.24968243205734256
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.03639101040989875,
+          "spearman_rho": -0.24374755347533972
+        }
+      ]
+    },
+    "A51": {
+      "primary_variable": "soil_ph",
+      "primary_variable_zh": "\u571f\u58e4pH",
+      "category": "soil",
+      "unit": "pH",
+      "direction": "positive",
+      "spearman_rho": 0.5126364337639083,
+      "rf_importance": 0.2590437953338922,
+      "transformer_importance": 0.011795666364151185,
+      "combined_support": 0.10090020037775828,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "soil_ph",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9708337106262304,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "soil_ph",
+          "score": 0.10090020037775828,
+          "spearman_rho": 0.5126364337639083
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.06759544548490477,
+          "spearman_rho": -0.2807567988583418
+        },
+        {
+          "variable": "tree_cover",
+          "score": 0.0499972679800687,
+          "spearman_rho": -0.7790527599467991
+        }
+      ]
+    },
+    "A52": {
+      "primary_variable": "impervious_surface",
+      "primary_variable_zh": "\u5efa\u6210\u533a\u6bd4\u4f8b",
+      "category": "urban",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.7372538712263347,
+      "rf_importance": 0.10523343508195598,
+      "transformer_importance": 0.035070577421859296,
+      "combined_support": 0.056408455789610734,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "impervious_surface",
+        "transformer": "impervious_surface"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9657286061222534,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "impervious_surface",
+          "score": 0.056408455789610734,
+          "spearman_rho": -0.7372538712263347
+        },
+        {
+          "variable": "organic_carbon",
+          "score": 0.019047192416023734,
+          "spearman_rho": 0.4972586876100604
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.01816379041543331,
+          "spearman_rho": -0.139158580080616
+        }
+      ]
+    },
+    "A53": {
+      "primary_variable": "clay_fraction",
+      "primary_variable_zh": "\u9ecf\u571f\u6bd4\u4f8b",
+      "category": "soil",
+      "unit": "%",
+      "direction": "negative",
+      "spearman_rho": -0.21340453006647964,
+      "rf_importance": 0.054187988811874026,
+      "transformer_importance": 0.03386573649931001,
+      "combined_support": 0.03627865978242758,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "clay_fraction",
+        "transformer": "clay_fraction"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.7384592845124905,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "clay_fraction",
+          "score": 0.03627865978242758,
+          "spearman_rho": -0.21340453006647964
+        },
+        {
+          "variable": "annual_precip",
+          "score": 0.01687422101713642,
+          "spearman_rho": 0.23623459343747086
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.01680701648857459,
+          "spearman_rho": 0.24571032414126537
+        }
+      ]
+    },
+    "A54": {
+      "primary_variable": "aspect",
+      "primary_variable_zh": "\u5761\u5411",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "positive",
+      "spearman_rho": 0.030932622613064086,
+      "rf_importance": 0.009976009472430923,
+      "transformer_importance": 0.06178108309448352,
+      "combined_support": 0.027627565822745805,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "annual_runoff",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.9619619671168698,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "aspect",
+          "score": 0.027627565822745805,
+          "spearman_rho": 0.030932622613064086
+        },
+        {
+          "variable": "annual_runoff",
+          "score": 0.0203953747571714,
+          "spearman_rho": 0.2017099984499491
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.019501264348574913,
+          "spearman_rho": -0.25501734260799874
+        }
+      ]
+    },
+    "A55": {
+      "primary_variable": "nighttime_lights",
+      "primary_variable_zh": "\u591c\u95f4\u706f\u5149",
+      "category": "urban",
+      "unit": "nW/cm2/sr",
+      "direction": "negative",
+      "spearman_rho": -0.3994675454283341,
+      "rf_importance": 0.03294338146767251,
+      "transformer_importance": 0.03951121539978599,
+      "combined_support": 0.03426277470444728,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "nighttime_lights",
+        "transformer": "nighttime_lights"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.9545393890344708,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "nighttime_lights",
+          "score": 0.03426277470444728,
+          "spearman_rho": -0.3994675454283341
+        },
+        {
+          "variable": "population_density",
+          "score": 0.02621626408686305,
+          "spearman_rho": -0.5852519628461947
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.022698210384933304,
+          "spearman_rho": -0.6279749284365788
+        }
+      ]
+    },
+    "A56": {
+      "primary_variable": "max_monthly_precip",
+      "primary_variable_zh": "\u6700\u5927\u6708\u964d\u6c34\u91cf",
+      "category": "climate",
+      "unit": "mm",
+      "direction": "positive",
+      "spearman_rho": 0.15859009546986289,
+      "rf_importance": 0.09651165073989085,
+      "transformer_importance": 0.048841646741317676,
+      "combined_support": 0.05588960205716581,
+      "method_choices": {
+        "spearman": "evi_mean",
+        "random_forest": "max_monthly_precip",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [
+        "random_forest"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.927596272612028,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.05588960205716581,
+          "spearman_rho": 0.15859009546986289
+        },
+        {
+          "variable": "population_density",
+          "score": 0.05285342623791021,
+          "spearman_rho": 0.43307962187705734
+        },
+        {
+          "variable": "evi_mean",
+          "score": 0.04971323083185763,
+          "spearman_rho": -0.4629359584142342
+        }
+      ]
+    },
+    "A57": {
+      "primary_variable": "organic_carbon",
+      "primary_variable_zh": "\u571f\u58e4\u6709\u673a\u78b3",
+      "category": "soil",
+      "unit": "g/kg",
+      "direction": "positive",
+      "spearman_rho": 0.43186275183920947,
+      "rf_importance": 0.00706987739422682,
+      "transformer_importance": 0.020913282182272442,
+      "combined_support": 0.016755327951181415,
+      "method_choices": {
+        "spearman": "impervious_surface",
+        "random_forest": "soil_ph",
+        "transformer": "ndvi_max"
+      },
+      "agreeing_methods": [],
+      "agreement_count": 0,
+      "concordant": false,
+      "temporal_stability_r": 0.8948831849053823,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "organic_carbon",
+          "score": 0.016755327951181415,
+          "spearman_rho": 0.43186275183920947
+        },
+        {
+          "variable": "soil_ph",
+          "score": 0.013233425445558554,
+          "spearman_rho": -0.30729601927058675
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.012873277386006124,
+          "spearman_rho": -0.4862028698712857
+        }
+      ]
+    },
+    "A58": {
+      "primary_variable": "nighttime_lights",
+      "primary_variable_zh": "\u591c\u95f4\u706f\u5149",
+      "category": "urban",
+      "unit": "nW/cm2/sr",
+      "direction": "positive",
+      "spearman_rho": 0.48807928249279153,
+      "rf_importance": 0.21571229722117474,
+      "transformer_importance": 0.07587679943107367,
+      "combined_support": 0.1095505304876679,
+      "method_choices": {
+        "spearman": "nighttime_lights",
+        "random_forest": "nighttime_lights",
+        "transformer": "nighttime_lights"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 3,
+      "concordant": true,
+      "temporal_stability_r": 0.9631748061381044,
+      "robust": true,
+      "top3_combined_variables": [
+        {
+          "variable": "nighttime_lights",
+          "score": 0.1095505304876679,
+          "spearman_rho": 0.48807928249279153
+        },
+        {
+          "variable": "lst_nighttime",
+          "score": 0.03686162351507725,
+          "spearman_rho": 0.39358589849390674
+        },
+        {
+          "variable": "aspect",
+          "score": 0.017116889280168482,
+          "spearman_rho": -0.008562967139538101
+        }
+      ]
+    },
+    "A59": {
+      "primary_variable": "elevation",
+      "primary_variable_zh": "\u9ad8\u7a0b",
+      "category": "terrain",
+      "unit": "m",
+      "direction": "negative",
+      "spearman_rho": -0.537634373085778,
+      "rf_importance": 0.07976391338416738,
+      "transformer_importance": 0.12054388174555172,
+      "combined_support": 0.07284987644335049,
+      "method_choices": {
+        "spearman": "elevation",
+        "random_forest": "ndvi_max",
+        "transformer": "elevation"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.8998850153672718,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "ndvi_max",
+          "score": 0.07848355553845804,
+          "spearman_rho": -0.5103726671766985
+        },
+        {
+          "variable": "elevation",
+          "score": 0.07284987644335049,
+          "spearman_rho": -0.537634373085778
+        },
+        {
+          "variable": "ndvi_mean",
+          "score": 0.06870326993826463,
+          "spearman_rho": -0.5163396982902919
+        }
+      ]
+    },
+    "A60": {
+      "primary_variable": "population_density",
+      "primary_variable_zh": "\u4eba\u53e3\u5bc6\u5ea6",
+      "category": "urban",
+      "unit": "people/km2",
+      "direction": "negative",
+      "spearman_rho": -0.08798323407784492,
+      "rf_importance": 0.009395974315266818,
+      "transformer_importance": 0.03820778127690841,
+      "combined_support": 0.01725401413058038,
+      "method_choices": {
+        "spearman": "slope",
+        "random_forest": "lst_daytime",
+        "transformer": "population_density"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.7786284389606188,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "population_density",
+          "score": 0.01725401413058038,
+          "spearman_rho": -0.08798323407784492
+        },
+        {
+          "variable": "slope",
+          "score": 0.015112335435112442,
+          "spearman_rho": 0.3251632084553989
+        },
+        {
+          "variable": "lst_daytime",
+          "score": 0.013394079776268464,
+          "spearman_rho": 0.0021574179393786543
+        }
+      ]
+    },
+    "A61": {
+      "primary_variable": "slope",
+      "primary_variable_zh": "\u5761\u5ea6",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "positive",
+      "spearman_rho": 0.19025855194343705,
+      "rf_importance": 0.08043011658552579,
+      "transformer_importance": 0.051199362616308294,
+      "combined_support": 0.046442124679866394,
+      "method_choices": {
+        "spearman": "soil_moisture",
+        "random_forest": "slope",
+        "transformer": "slope"
+      },
+      "agreeing_methods": [
+        "random_forest",
+        "transformer"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.7724959081857994,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "slope",
+          "score": 0.046442124679866394,
+          "spearman_rho": 0.19025855194343705
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.025607270949695893,
+          "spearman_rho": -0.19895791260410886
+        },
+        {
+          "variable": "organic_carbon",
+          "score": 0.019024797732133353,
+          "spearman_rho": 0.05615110467239105
+        }
+      ]
+    },
+    "A62": {
+      "primary_variable": "aspect",
+      "primary_variable_zh": "\u5761\u5411",
+      "category": "terrain",
+      "unit": "degree",
+      "direction": "positive",
+      "spearman_rho": 0.029242668669179333,
+      "rf_importance": 0.021129851435472267,
+      "transformer_importance": 0.02746667676780431,
+      "combined_support": 0.019704767875263516,
+      "method_choices": {
+        "spearman": "slope",
+        "random_forest": "impervious_surface",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "transformer"
+      ],
+      "agreement_count": 1,
+      "concordant": false,
+      "temporal_stability_r": 0.747718822318897,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "aspect",
+          "score": 0.019704767875263516,
+          "spearman_rho": 0.029242668669179333
+        },
+        {
+          "variable": "clay_fraction",
+          "score": 0.013308060932070593,
+          "spearman_rho": -0.1439741541527599
+        },
+        {
+          "variable": "impervious_surface",
+          "score": 0.013045839055412504,
+          "spearman_rho": -0.008524037060346327
+        }
+      ]
+    },
+    "A63": {
+      "primary_variable": "max_monthly_precip",
+      "primary_variable_zh": "\u6700\u5927\u6708\u964d\u6c34\u91cf",
+      "category": "climate",
+      "unit": "mm",
+      "direction": "negative",
+      "spearman_rho": -0.2322412402095001,
+      "rf_importance": 0.08791454415310343,
+      "transformer_importance": 0.026058095215548874,
+      "combined_support": 0.04888391275562572,
+      "method_choices": {
+        "spearman": "max_monthly_precip",
+        "random_forest": "max_monthly_precip",
+        "transformer": "aspect"
+      },
+      "agreeing_methods": [
+        "spearman",
+        "random_forest"
+      ],
+      "agreement_count": 2,
+      "concordant": true,
+      "temporal_stability_r": 0.6488222130277741,
+      "robust": false,
+      "top3_combined_variables": [
+        {
+          "variable": "max_monthly_precip",
+          "score": 0.04888391275562572,
+          "spearman_rho": -0.2322412402095001
+        },
+        {
+          "variable": "aspect",
+          "score": 0.025021543301543835,
+          "spearman_rho": -0.003104338425189729
+        },
+        {
+          "variable": "flow_accumulation",
+          "score": 0.014778120004600125,
+          "spearman_rho": 0.004011141474665879
+        }
+      ]
+    }
+  },
+  "variables": {
+    "elevation": {
+      "display_name_zh": "\u9ad8\u7a0b",
+      "category": "terrain",
+      "unit": "m",
+      "top_dimensions_combined": [
+        "A08",
+        "A59",
+        "A19",
+        "A21",
+        "A43"
+      ],
+      "top_dimensions_spearman": [
+        "A08",
+        "A51",
+        "A01",
+        "A32",
+        "A21"
+      ],
+      "top_dimensions_random_forest": [
+        "A08",
+        "A59",
+        "A19",
+        "A05",
+        "A43"
+      ],
+      "top_dimensions_transformer": [
+        "A19",
+        "A59",
+        "A21",
+        "A46",
+        "A43"
+      ],
+      "best_spearman_rho": 0.8686630326098376,
+      "rf_random_cv_r2": 0.9048877173095772,
+      "rf_spatial_cv_r2": 0.8658040422479868,
+      "transformer_random_cv_r2": 0.8291360855102539,
+      "transformer_spatial_cv_r2": 0.7701250672340393
+    },
+    "slope": {
+      "display_name_zh": "\u5761\u5ea6",
+      "category": "terrain",
+      "unit": "degree",
+      "top_dimensions_combined": [
+        "A08",
+        "A06",
+        "A61",
+        "A46",
+        "A11"
+      ],
+      "top_dimensions_spearman": [
+        "A51",
+        "A08",
+        "A06",
+        "A32",
+        "A21"
+      ],
+      "top_dimensions_random_forest": [
+        "A08",
+        "A06",
+        "A61",
+        "A23",
+        "A09"
+      ],
+      "top_dimensions_transformer": [
+        "A46",
+        "A11",
+        "A43",
+        "A42",
+        "A61"
+      ],
+      "best_spearman_rho": -0.7194903066847054,
+      "rf_random_cv_r2": 0.6176922425292036,
+      "rf_spatial_cv_r2": 0.557521884582646,
+      "transformer_random_cv_r2": 0.5295055508613586,
+      "transformer_spatial_cv_r2": 0.49827048778533933
+    },
+    "aspect": {
+      "display_name_zh": "\u5761\u5411",
+      "category": "terrain",
+      "unit": "degree",
+      "top_dimensions_combined": [
+        "A37",
+        "A17",
+        "A47",
+        "A27",
+        "A48"
+      ],
+      "top_dimensions_spearman": [
+        "A48",
+        "A17",
+        "A45",
+        "A39",
+        "A19"
+      ],
+      "top_dimensions_random_forest": [
+        "A47",
+        "A37",
+        "A63",
+        "A19",
+        "A08"
+      ],
+      "top_dimensions_transformer": [
+        "A56",
+        "A28",
+        "A27",
+        "A54",
+        "A37"
+      ],
+      "best_spearman_rho": 0.12127650640797268,
+      "rf_random_cv_r2": 0.1033359134858659,
+      "rf_spatial_cv_r2": 0.02741275802771752,
+      "transformer_random_cv_r2": 0.02120974063873291,
+      "transformer_spatial_cv_r2": 0.014351773262023925
+    },
+    "flow_accumulation": {
+      "display_name_zh": "\u6c47\u6d41\u7d2f\u79ef\uff08\u5bf9\u6570\uff09",
+      "category": "terrain",
+      "unit": "log(cell count + 1)",
+      "top_dimensions_combined": [
+        "A11",
+        "A29",
+        "A30",
+        "A59",
+        "A31"
+      ],
+      "top_dimensions_spearman": [
+        "A11",
+        "A45",
+        "A50",
+        "A14",
+        "A51"
+      ],
+      "top_dimensions_random_forest": [
+        "A11",
+        "A59",
+        "A02",
+        "A14",
+        "A29"
+      ],
+      "top_dimensions_transformer": [
+        "A29",
+        "A30",
+        "A11",
+        "A31",
+        "A42"
+      ],
+      "best_spearman_rho": -0.265965185699797,
+      "rf_random_cv_r2": 0.2188949692982367,
+      "rf_spatial_cv_r2": 0.12303064588637706,
+      "transformer_random_cv_r2": 0.11092251539230347,
+      "transformer_spatial_cv_r2": 0.0911339521408081
+    },
+    "clay_fraction": {
+      "display_name_zh": "\u9ecf\u571f\u6bd4\u4f8b",
+      "category": "soil",
+      "unit": "%",
+      "top_dimensions_combined": [
+        "A51",
+        "A28",
+        "A53",
+        "A10",
+        "A11"
+      ],
+      "top_dimensions_spearman": [
+        "A01",
+        "A28",
+        "A51",
+        "A25",
+        "A07"
+      ],
+      "top_dimensions_random_forest": [
+        "A51",
+        "A28",
+        "A53",
+        "A07",
+        "A01"
+      ],
+      "top_dimensions_transformer": [
+        "A30",
+        "A10",
+        "A11",
+        "A27",
+        "A06"
+      ],
+      "best_spearman_rho": 0.28991148106938536,
+      "rf_random_cv_r2": 0.29913917749531055,
+      "rf_spatial_cv_r2": 0.15238268904948843,
+      "transformer_random_cv_r2": 0.1493370532989502,
+      "transformer_spatial_cv_r2": 0.1116613507270813
+    },
+    "organic_carbon": {
+      "display_name_zh": "\u571f\u58e4\u6709\u673a\u78b3",
+      "category": "soil",
+      "unit": "g/kg",
+      "top_dimensions_combined": [
+        "A31",
+        "A42",
+        "A02",
+        "A46",
+        "A30"
+      ],
+      "top_dimensions_spearman": [
+        "A08",
+        "A31",
+        "A02",
+        "A32",
+        "A51"
+      ],
+      "top_dimensions_random_forest": [
+        "A31",
+        "A02",
+        "A42",
+        "A46",
+        "A61"
+      ],
+      "top_dimensions_transformer": [
+        "A31",
+        "A30",
+        "A42",
+        "A59",
+        "A46"
+      ],
+      "best_spearman_rho": 0.591856507658537,
+      "rf_random_cv_r2": 0.48673822427061636,
+      "rf_spatial_cv_r2": 0.3557708320475321,
+      "transformer_random_cv_r2": 0.3327409863471985,
+      "transformer_spatial_cv_r2": 0.2956139087677002
+    },
+    "soil_ph": {
+      "display_name_zh": "\u571f\u58e4pH",
+      "category": "soil",
+      "unit": "pH",
+      "top_dimensions_combined": [
+        "A51",
+        "A08",
+        "A46",
+        "A33",
+        "A19"
+      ],
+      "top_dimensions_spearman": [
+        "A08",
+        "A51",
+        "A32",
+        "A52",
+        "A01"
+      ],
+      "top_dimensions_random_forest": [
+        "A51",
+        "A08",
+        "A41",
+        "A07",
+        "A33"
+      ],
+      "top_dimensions_transformer": [
+        "A46",
+        "A30",
+        "A19",
+        "A29",
+        "A33"
+      ],
+      "best_spearman_rho": -0.5315651141437967,
+      "rf_random_cv_r2": 0.4551389819707031,
+      "rf_spatial_cv_r2": 0.32900257283994705,
+      "transformer_random_cv_r2": 0.30444155931472777,
+      "transformer_spatial_cv_r2": 0.23553793430328368
+    },
+    "water_capacity": {
+      "display_name_zh": "\u7530\u95f4\u6301\u6c34\u91cf",
+      "category": "soil",
+      "unit": "%",
+      "top_dimensions_combined": [
+        "A08",
+        "A19",
+        "A17",
+        "A46",
+        "A59"
+      ],
+      "top_dimensions_spearman": [
+        "A08",
+        "A19",
+        "A46",
+        "A37",
+        "A47"
+      ],
+      "top_dimensions_random_forest": [
+        "A08",
+        "A17",
+        "A06",
+        "A40",
+        "A19"
+      ],
+      "top_dimensions_transformer": [
+        "A46",
+        "A19",
+        "A21",
+        "A59",
+        "A30"
+      ],
+      "best_spearman_rho": 0.5301471649525469,
+      "rf_random_cv_r2": 0.5669632077495678,
+      "rf_spatial_cv_r2": 0.4312146493749177,
+      "transformer_random_cv_r2": 0.38346951007843016,
+      "transformer_spatial_cv_r2": 0.29380546808242797
+    },
+    "ndvi_mean": {
+      "display_name_zh": "\u5e74\u5747NDVI",
+      "category": "vegetation",
+      "unit": "index",
+      "top_dimensions_combined": [
+        "A19",
+        "A59",
+        "A34",
+        "A36",
+        "A41"
+      ],
+      "top_dimensions_spearman": [
+        "A34",
+        "A04",
+        "A19",
+        "A06",
+        "A21"
+      ],
+      "top_dimensions_random_forest": [
+        "A34",
+        "A41",
+        "A59",
+        "A04",
+        "A19"
+      ],
+      "top_dimensions_transformer": [
+        "A30",
+        "A19",
+        "A59",
+        "A42",
+        "A36"
+      ],
+      "best_spearman_rho": -0.6155944276019628,
+      "rf_random_cv_r2": 0.8168407268146206,
+      "rf_spatial_cv_r2": 0.38495208698095085,
+      "transformer_random_cv_r2": 0.6739932417869567,
+      "transformer_spatial_cv_r2": 0.21838715076446533
+    },
+    "ndvi_max": {
+      "display_name_zh": "\u5e74\u6700\u5927NDVI",
+      "category": "vegetation",
+      "unit": "index",
+      "top_dimensions_combined": [
+        "A59",
+        "A34",
+        "A36",
+        "A19",
+        "A06"
+      ],
+      "top_dimensions_spearman": [
+        "A34",
+        "A04",
+        "A06",
+        "A19",
+        "A59"
+      ],
+      "top_dimensions_random_forest": [
+        "A34",
+        "A59",
+        "A41",
+        "A36",
+        "A04"
+      ],
+      "top_dimensions_transformer": [
+        "A36",
+        "A42",
+        "A19",
+        "A59",
+        "A30"
+      ],
+      "best_spearman_rho": -0.5813823891598674,
+      "rf_random_cv_r2": 0.796140793356779,
+      "rf_spatial_cv_r2": 0.27627251237428385,
+      "transformer_random_cv_r2": 0.6266735792160034,
+      "transformer_spatial_cv_r2": 0.06280751228332519
+    },
+    "evi_mean": {
+      "display_name_zh": "\u5e74\u5747EVI",
+      "category": "vegetation",
+      "unit": "index",
+      "top_dimensions_combined": [
+        "A34",
+        "A19",
+        "A59",
+        "A36",
+        "A56"
+      ],
+      "top_dimensions_spearman": [
+        "A34",
+        "A04",
+        "A06",
+        "A19",
+        "A01"
+      ],
+      "top_dimensions_random_forest": [
+        "A34",
+        "A04",
+        "A19",
+        "A56",
+        "A41"
+      ],
+      "top_dimensions_transformer": [
+        "A30",
+        "A19",
+        "A59",
+        "A36",
+        "A42"
+      ],
+      "best_spearman_rho": -0.6548126438508554,
+      "rf_random_cv_r2": 0.8256557440788477,
+      "rf_spatial_cv_r2": 0.4508276267489456,
+      "transformer_random_cv_r2": 0.6989839196205139,
+      "transformer_spatial_cv_r2": 0.3065786242485046
+    },
+    "lai_mean": {
+      "display_name_zh": "\u5e74\u5747\u53f6\u9762\u79ef\u6307\u6570",
+      "category": "vegetation",
+      "unit": "m2/m2",
+      "top_dimensions_combined": [
+        "A19",
+        "A59",
+        "A36",
+        "A41",
+        "A42"
+      ],
+      "top_dimensions_spearman": [
+        "A19",
+        "A06",
+        "A34",
+        "A21",
+        "A04"
+      ],
+      "top_dimensions_random_forest": [
+        "A19",
+        "A41",
+        "A36",
+        "A59",
+        "A42"
+      ],
+      "top_dimensions_transformer": [
+        "A19",
+        "A59",
+        "A42",
+        "A30",
+        "A21"
+      ],
+      "best_spearman_rho": -0.5638908899387992,
+      "rf_random_cv_r2": 0.78485370824956,
+      "rf_spatial_cv_r2": 0.2164523506832486,
+      "transformer_random_cv_r2": 0.5481459736824036,
+      "transformer_spatial_cv_r2": -0.10394796133041381
+    },
+    "tree_cover": {
+      "display_name_zh": "\u6811\u51a0\u8986\u76d6\u7387",
+      "category": "vegetation",
+      "unit": "%",
+      "top_dimensions_combined": [
+        "A08",
+        "A06",
+        "A51",
+        "A46",
+        "A21"
+      ],
+      "top_dimensions_spearman": [
+        "A08",
+        "A51",
+        "A32",
+        "A01",
+        "A06"
+      ],
+      "top_dimensions_random_forest": [
+        "A08",
+        "A51",
+        "A07",
+        "A06",
+        "A20"
+      ],
+      "top_dimensions_transformer": [
+        "A46",
+        "A21",
+        "A06",
+        "A31",
+        "A35"
+      ],
+      "best_spearman_rho": 0.7935126286402914,
+      "rf_random_cv_r2": 0.7020222303917065,
+      "rf_spatial_cv_r2": 0.6509967361224777,
+      "transformer_random_cv_r2": 0.6450188398361206,
+      "transformer_spatial_cv_r2": 0.6208424925804138
+    },
+    "albedo": {
+      "display_name_zh": "\u77ed\u6ce2\u53cd\u7167\u7387",
+      "category": "vegetation",
+      "unit": "fraction",
+      "top_dimensions_combined": [
+        "A04",
+        "A19",
+        "A36",
+        "A02",
+        "A56"
+      ],
+      "top_dimensions_spearman": [
+        "A04",
+        "A34",
+        "A06",
+        "A41",
+        "A19"
+      ],
+      "top_dimensions_random_forest": [
+        "A04",
+        "A02",
+        "A19",
+        "A41",
+        "A33"
+      ],
+      "top_dimensions_transformer": [
+        "A19",
+        "A29",
+        "A30",
+        "A36",
+        "A56"
+      ],
+      "best_spearman_rho": 0.6044284225300111,
+      "rf_random_cv_r2": 0.7574149195428491,
+      "rf_spatial_cv_r2": 0.44818082103953855,
+      "transformer_random_cv_r2": 0.5634028911590576,
+      "transformer_spatial_cv_r2": 0.25413397550582884
+    },
+    "lst_daytime": {
+      "display_name_zh": "\u65e5\u95f4\u5730\u8868\u6e29\u5ea6",
+      "category": "temperature",
+      "unit": "degC",
+      "top_dimensions_combined": [
+        "A27",
+        "A34",
+        "A36",
+        "A41",
+        "A19"
+      ],
+      "top_dimensions_spearman": [
+        "A34",
+        "A01",
+        "A13",
+        "A27",
+        "A04"
+      ],
+      "top_dimensions_random_forest": [
+        "A27",
+        "A34",
+        "A41",
+        "A36",
+        "A13"
+      ],
+      "top_dimensions_transformer": [
+        "A36",
+        "A19",
+        "A27",
+        "A15",
+        "A30"
+      ],
+      "best_spearman_rho": 0.5117921289608965,
+      "rf_random_cv_r2": 0.7875813210221912,
+      "rf_spatial_cv_r2": 0.486912053459545,
+      "transformer_random_cv_r2": 0.46806672811508176,
+      "transformer_spatial_cv_r2": 0.06283535957336425
+    },
+    "lst_nighttime": {
+      "display_name_zh": "\u591c\u95f4\u5730\u8868\u6e29\u5ea6",
+      "category": "temperature",
+      "unit": "degC",
+      "top_dimensions_combined": [
+        "A04",
+        "A27",
+        "A30",
+        "A13",
+        "A58"
+      ],
+      "top_dimensions_spearman": [
+        "A04",
+        "A13",
+        "A07",
+        "A34",
+        "A01"
+      ],
+      "top_dimensions_random_forest": [
+        "A04",
+        "A13",
+        "A27",
+        "A58",
+        "A30"
+      ],
+      "top_dimensions_transformer": [
+        "A30",
+        "A27",
+        "A15",
+        "A11",
+        "A21"
+      ],
+      "best_spearman_rho": -0.47811343284619245,
+      "rf_random_cv_r2": 0.7150313584983872,
+      "rf_spatial_cv_r2": 0.4740502252425099,
+      "transformer_random_cv_r2": 0.3693526864051819,
+      "transformer_spatial_cv_r2": 0.1564306378364563
+    },
+    "air_temp_mean": {
+      "display_name_zh": "\u5e74\u5747\u6c14\u6e29",
+      "category": "temperature",
+      "unit": "degC",
+      "top_dimensions_combined": [
+        "A04",
+        "A19",
+        "A41",
+        "A30",
+        "A21"
+      ],
+      "top_dimensions_spearman": [
+        "A04",
+        "A34",
+        "A21",
+        "A19",
+        "A10"
+      ],
+      "top_dimensions_random_forest": [
+        "A04",
+        "A41",
+        "A19",
+        "A59",
+        "A43"
+      ],
+      "top_dimensions_transformer": [
+        "A30",
+        "A19",
+        "A15",
+        "A36",
+        "A43"
+      ],
+      "best_spearman_rho": -0.6444604543039891,
+      "rf_random_cv_r2": 0.8156185154409353,
+      "rf_spatial_cv_r2": 0.5940694659840312,
+      "transformer_random_cv_r2": 0.6439726114273071,
+      "transformer_spatial_cv_r2": 0.37810579538345335
+    },
+    "dew_point_temp": {
+      "display_name_zh": "\u5e74\u5747\u9732\u70b9\u6e29\u5ea6",
+      "category": "temperature",
+      "unit": "degC",
+      "top_dimensions_combined": [
+        "A19",
+        "A04",
+        "A56",
+        "A36",
+        "A21"
+      ],
+      "top_dimensions_spearman": [
+        "A04",
+        "A19",
+        "A21",
+        "A34",
+        "A06"
+      ],
+      "top_dimensions_random_forest": [
+        "A19",
+        "A04",
+        "A23",
+        "A56",
+        "A45"
+      ],
+      "top_dimensions_transformer": [
+        "A19",
+        "A30",
+        "A36",
+        "A21",
+        "A33"
+      ],
+      "best_spearman_rho": -0.5985521455141721,
+      "rf_random_cv_r2": 0.7993196506316446,
+      "rf_spatial_cv_r2": 0.5801798269095495,
+      "transformer_random_cv_r2": 0.5923664450645447,
+      "transformer_spatial_cv_r2": 0.35213868618011473
+    },
+    "annual_precip": {
+      "display_name_zh": "\u5e74\u964d\u6c34\u91cf",
+      "category": "climate",
+      "unit": "mm",
+      "top_dimensions_combined": [
+        "A03",
+        "A13",
+        "A43",
+        "A38",
+        "A50"
+      ],
+      "top_dimensions_spearman": [
+        "A03",
+        "A28",
+        "A13",
+        "A43",
+        "A50"
+      ],
+      "top_dimensions_random_forest": [
+        "A03",
+        "A13",
+        "A38",
+        "A50",
+        "A28"
+      ],
+      "top_dimensions_transformer": [
+        "A43",
+        "A29",
+        "A30",
+        "A36",
+        "A50"
+      ],
+      "best_spearman_rho": 0.3332731535094919,
+      "rf_random_cv_r2": 0.73588702872611,
+      "rf_spatial_cv_r2": 0.6328315870200948,
+      "transformer_random_cv_r2": 0.07535389661788941,
+      "transformer_spatial_cv_r2": 0.03169203996658325
+    },
+    "max_monthly_precip": {
+      "display_name_zh": "\u6700\u5927\u6708\u964d\u6c34\u91cf",
+      "category": "climate",
+      "unit": "mm",
+      "top_dimensions_combined": [
+        "A03",
+        "A28",
+        "A56",
+        "A63",
+        "A36"
+      ],
+      "top_dimensions_spearman": [
+        "A28",
+        "A03",
+        "A63",
+        "A24",
+        "A55"
+      ],
+      "top_dimensions_random_forest": [
+        "A28",
+        "A03",
+        "A56",
+        "A63",
+        "A26"
+      ],
+      "top_dimensions_transformer": [
+        "A03",
+        "A19",
+        "A29",
+        "A36",
+        "A33"
+      ],
+      "best_spearman_rho": 0.29158082507079974,
+      "rf_random_cv_r2": 0.7290677412337094,
+      "rf_spatial_cv_r2": 0.5956348054875894,
+      "transformer_random_cv_r2": 0.06858832836151123,
+      "transformer_spatial_cv_r2": -0.01796894073486328
+    },
+    "soil_moisture": {
+      "display_name_zh": "\u8868\u5c42\u571f\u58e4\u6e7f\u5ea6",
+      "category": "hydrology",
+      "unit": "m3/m3",
+      "top_dimensions_combined": [
+        "A27",
+        "A04",
+        "A36",
+        "A30",
+        "A17"
+      ],
+      "top_dimensions_spearman": [
+        "A27",
+        "A04",
+        "A01",
+        "A41",
+        "A34"
+      ],
+      "top_dimensions_random_forest": [
+        "A27",
+        "A04",
+        "A36",
+        "A17",
+        "A41"
+      ],
+      "top_dimensions_transformer": [
+        "A36",
+        "A30",
+        "A27",
+        "A15",
+        "A19"
+      ],
+      "best_spearman_rho": -0.4765092351083314,
+      "rf_random_cv_r2": 0.7376450760242705,
+      "rf_spatial_cv_r2": 0.5463908374548309,
+      "transformer_random_cv_r2": 0.38811142444610597,
+      "transformer_spatial_cv_r2": 0.23656595945358277
+    },
+    "annual_runoff": {
+      "display_name_zh": "\u5e74\u5f84\u6d41\u91cf",
+      "category": "hydrology",
+      "unit": "mm",
+      "top_dimensions_combined": [
+        "A43",
+        "A13",
+        "A03",
+        "A29",
+        "A38"
+      ],
+      "top_dimensions_spearman": [
+        "A13",
+        "A43",
+        "A03",
+        "A59",
+        "A53"
+      ],
+      "top_dimensions_random_forest": [
+        "A13",
+        "A43",
+        "A03",
+        "A38",
+        "A34"
+      ],
+      "top_dimensions_transformer": [
+        "A43",
+        "A30",
+        "A29",
+        "A36",
+        "A40"
+      ],
+      "best_spearman_rho": -0.3577237788607077,
+      "rf_random_cv_r2": 0.7531074920648526,
+      "rf_spatial_cv_r2": 0.6403721604549946,
+      "transformer_random_cv_r2": 0.07183272838592529,
+      "transformer_spatial_cv_r2": 0.023610270023345946
+    },
+    "annual_et": {
+      "display_name_zh": "\u5e74\u84b8\u6563\u91cf",
+      "category": "hydrology",
+      "unit": "mm",
+      "top_dimensions_combined": [
+        "A04",
+        "A36",
+        "A43",
+        "A42",
+        "A30"
+      ],
+      "top_dimensions_spearman": [
+        "A04",
+        "A41",
+        "A34",
+        "A56",
+        "A36"
+      ],
+      "top_dimensions_random_forest": [
+        "A04",
+        "A36",
+        "A43",
+        "A42",
+        "A34"
+      ],
+      "top_dimensions_transformer": [
+        "A36",
+        "A43",
+        "A30",
+        "A42",
+        "A15"
+      ],
+      "best_spearman_rho": -0.4881580345377544,
+      "rf_random_cv_r2": 0.7622713510275314,
+      "rf_spatial_cv_r2": 0.5784875631102478,
+      "transformer_random_cv_r2": 0.41597225666046145,
+      "transformer_spatial_cv_r2": 0.24920549392700195
+    },
+    "impervious_surface": {
+      "display_name_zh": "\u5efa\u6210\u533a\u6bd4\u4f8b",
+      "category": "urban",
+      "unit": "%",
+      "top_dimensions_combined": [
+        "A08",
+        "A36",
+        "A52",
+        "A42",
+        "A15"
+      ],
+      "top_dimensions_spearman": [
+        "A08",
+        "A07",
+        "A01",
+        "A52",
+        "A32"
+      ],
+      "top_dimensions_random_forest": [
+        "A08",
+        "A52",
+        "A36",
+        "A05",
+        "A35"
+      ],
+      "top_dimensions_transformer": [
+        "A36",
+        "A42",
+        "A15",
+        "A35",
+        "A56"
+      ],
+      "best_spearman_rho": -0.7926284025385469,
+      "rf_random_cv_r2": 0.8125630723758231,
+      "rf_spatial_cv_r2": 0.7612426783444455,
+      "transformer_random_cv_r2": 0.746954333782196,
+      "transformer_spatial_cv_r2": 0.6875279903411865
+    },
+    "nighttime_lights": {
+      "display_name_zh": "\u591c\u95f4\u706f\u5149",
+      "category": "urban",
+      "unit": "nW/cm2/sr",
+      "top_dimensions_combined": [
+        "A58",
+        "A50",
+        "A13",
+        "A40",
+        "A55"
+      ],
+      "top_dimensions_spearman": [
+        "A58",
+        "A10",
+        "A01",
+        "A13",
+        "A40"
+      ],
+      "top_dimensions_random_forest": [
+        "A58",
+        "A13",
+        "A04",
+        "A50",
+        "A31"
+      ],
+      "top_dimensions_transformer": [
+        "A50",
+        "A40",
+        "A58",
+        "A36",
+        "A56"
+      ],
+      "best_spearman_rho": 0.48807928249279153,
+      "rf_random_cv_r2": 0.6872973035369649,
+      "rf_spatial_cv_r2": 0.2780921838738575,
+      "transformer_random_cv_r2": 0.2569712042808533,
+      "transformer_spatial_cv_r2": -0.33212116956710813
+    },
+    "population_density": {
+      "display_name_zh": "\u4eba\u53e3\u5bc6\u5ea6",
+      "category": "urban",
+      "unit": "people/km2",
+      "top_dimensions_combined": [
+        "A01",
+        "A56",
+        "A35",
+        "A46",
+        "A00"
+      ],
+      "top_dimensions_spearman": [
+        "A34",
+        "A01",
+        "A08",
+        "A28",
+        "A52"
+      ],
+      "top_dimensions_random_forest": [
+        "A01",
+        "A00",
+        "A36",
+        "A35",
+        "A11"
+      ],
+      "top_dimensions_transformer": [
+        "A56",
+        "A46",
+        "A35",
+        "A59",
+        "A16"
+      ],
+      "best_spearman_rho": 0.6745123142069835,
+      "rf_random_cv_r2": 0.5284004417174272,
+      "rf_spatial_cv_r2": 0.08936157939058238,
+      "transformer_random_cv_r2": 0.2571109771728516,
+      "transformer_spatial_cv_r2": -0.25536948442459106
+    }
+  }
+}

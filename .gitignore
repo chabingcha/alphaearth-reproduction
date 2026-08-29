@@ -16,9 +16,22 @@ env/
 .vscode/
 .idea/
 
-# Data files (large binary)
+# Data files (large binary / reproducible downloads)
 data/*.npy
 data/__pycache__/
+data/raw/
+data/processed/
+
+# Generated model and retrieval artifacts
+results/**/*.faiss
+results/**/*.parquet
+results/**/*.pt
+results/**/answers.jsonl
+
+# Local rendering and inspection workspaces
+.ppt_build*/
+tmp/
+*.pptx.inspect.ndjson
 
 # OS
 .DS_Store

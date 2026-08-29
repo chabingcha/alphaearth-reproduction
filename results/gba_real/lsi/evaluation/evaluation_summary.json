@@ -1,0 +1,152 @@
+{
+  "evaluation_type": "deterministic evidence-based automatic evaluation",
+  "not_directly_comparable_to": "the paper's four-model rotating LLM-as-Judge evaluation",
+  "cycles": 360,
+  "locations": 36,
+  "intents": 10,
+  "year": 2023,
+  "scores": {
+    "grounding": {
+      "mean": 5.0,
+      "std": 0.0,
+      "min": 5.0,
+      "max": 5.0
+    },
+    "coherence": {
+      "mean": 5.0,
+      "std": 0.0,
+      "min": 5.0,
+      "max": 5.0
+    },
+    "scientific_accuracy": {
+      "mean": 5.0,
+      "std": 0.0,
+      "min": 5.0,
+      "max": 5.0
+    },
+    "completeness": {
+      "mean": 5.0,
+      "std": 0.0,
+      "min": 5.0,
+      "max": 5.0
+    },
+    "practical_utility": {
+      "mean": 4.6,
+      "std": 0.48989794855663565,
+      "min": 4.0,
+      "max": 5.0
+    },
+    "overall": {
+      "mean": 4.92,
+      "std": 0.09797958971132721,
+      "min": 4.8,
+      "max": 5.0
+    }
+  },
+  "latency_ms": {
+    "mean": 1.472163672229322,
+    "p50": 1.4599374999306747,
+    "p95": 1.6619541500631385
+  },
+  "numeric_accuracy_fraction": 1.0,
+  "retrieval_benchmark": {
+    "exact_recall_at_10_mean": 1.0,
+    "exact_recall_at_10_min": 1.0,
+    "raw_faiss_search_latency_ms_mean": 0.10257533334525862,
+    "raw_faiss_search_latency_ms_p95": 0.12597975023709296,
+    "filtered_analog_distance_km_mean": 39.191016014736505,
+    "filtered_analogs_cross_city_fraction": 0.6055555555555555
+  },
+  "per_intent": {
+    "agricultural_suitability": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 5.0,
+      "overall": 5.0
+    },
+    "climate_characterization": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 5.0,
+      "overall": 5.0
+    },
+    "drought_vulnerability": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 5.0,
+      "overall": 5.0
+    },
+    "flood_risk": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 4.0,
+      "overall": 4.800000000000001
+    },
+    "general_profile": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 5.0,
+      "overall": 5.0
+    },
+    "hydrology": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 4.0,
+      "overall": 4.800000000000001
+    },
+    "location_comparison": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 5.0,
+      "overall": 5.0
+    },
+    "terrain_analysis": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 4.0,
+      "overall": 4.800000000000001
+    },
+    "urban_development": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 4.0,
+      "overall": 4.800000000000001
+    },
+    "vegetation_health": {
+      "grounding": 5.0,
+      "coherence": 5.0,
+      "scientific_accuracy": 5.0,
+      "completeness": 5.0,
+      "practical_utility": 5.0,
+      "overall": 5.0
+    }
+  },
+  "paper_reference": {
+    "judge": "4 rotating LLMs",
+    "cycles": 360,
+    "grounding_mean": 3.93,
+    "coherence_mean": 4.25,
+    "scientific_accuracy_mean": 3.62,
+    "completeness_mean": 3.48,
+    "practical_utility_mean": 3.42,
+    "overall_mean": 3.74
+  }
+}
